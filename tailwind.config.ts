@@ -1,4 +1,7 @@
 import type { Config } from 'tailwindcss';
+import tailwindcssAspectRatio from '@tailwindcss/aspect-ratio';
+import tailwindcssContainerQueries from '@tailwindcss/container-queries';
+import tailwindcssTypography from '@tailwindcss/typography';
 import tailwindcssAnimate from 'tailwindcss-animate';
 import { fontFamily } from 'tailwindcss/defaultTheme';
 
@@ -93,7 +96,12 @@ const config: Config = {
       },
     },
   },
-  plugins: [tailwindcssAnimate],
+  plugins: [
+    tailwindcssAnimate,
+    tailwindcssTypography,
+    tailwindcssAspectRatio,
+    tailwindcssContainerQueries,
+  ],
 };
 
 export default config;
