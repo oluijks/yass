@@ -8,6 +8,7 @@ export default antfu(
       semi: true,
       indent: 2,
     },
+    ignores: ['src/lib/server/db/migrations/'],
   },
   {
     files: ['**/*.svelte'],
