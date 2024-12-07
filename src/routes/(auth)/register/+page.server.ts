@@ -1,33 +1,32 @@
-import type { Actions, PageServerLoad } from './$types';
-import { registerFormSchema } from '$lib/components/auth/form-schemas.js';
-import * as auth from '$lib/server/auth';
-import { db } from '$lib/server/db';
-import * as table from '$lib/server/db/schema';
-import { PASSWORD_HASH_OPTIONS } from '$lib/utils';
-import { hash } from '@node-rs/argon2';
-import { encodeBase32LowerCase } from '@oslojs/encoding';
-import { redirect } from '@sveltejs/kit';
-import { eq } from 'drizzle-orm';
-import { message, superValidate } from 'sveltekit-superforms';
-import { zod } from 'sveltekit-superforms/adapters';
+import { registerFormSchema } from "$lib/components/auth/schema.js";
+import * as auth from "$lib/server/auth";
+import { db } from "$lib/server/db";
+import * as table from "$lib/server/db/schema";
+import { PASSWORD_HASH_OPTIONS } from "$lib/utils";
+import { hash } from "@node-rs/argon2";
+import { encodeBase32LowerCase } from "@oslojs/encoding";
+import { redirect } from "@sveltejs/kit";
+import { eq } from "drizzle-orm";
+import { message, superValidate } from "sveltekit-superforms";
+import { zod } from "sveltekit-superforms/adapters";
 
-export const load: PageServerLoad = (async (event) => {
+export async function load(event) {
   if (event.locals.user) {
-    return redirect(302, '/');
+    return redirect(302, "/");
   }
   return {
     meta: {
-      title: 'Register',
+      title: "Register",
     },
     form: await superValidate(zod(registerFormSchema), { strict: false }),
   };
-}) satisfies PageServerLoad;
+}
 
-export const actions: Actions = {
+export const actions = {
   default: async (event) => {
     const form = await superValidate(event, zod(registerFormSchema));
     if (!form.valid) {
-      return message(form, { status: 'error', text: 'Invalid form' });
+      return message(form, { status: "error", text: "Invalid form" });
     }
 
     const userId = generateUserId();
@@ -40,7 +39,7 @@ export const actions: Actions = {
 
     const existingUser = results.at(0);
     if (existingUser) {
-      return message(form, { status: 'error', text: 'Username already taken' });
+      return message(form, { status: "error", text: "Username already taken" });
     }
 
     try {
@@ -57,12 +56,12 @@ export const actions: Actions = {
     catch (error) {
       console.error(error);
       return message(form, {
-        status: 'error',
-        text: 'Error, please try again',
+        status: "error",
+        text: "Error, please try again",
       });
     }
 
-    redirect(302, '/');
+    redirect(302, "/");
   },
 };
 

@@ -1,17 +1,17 @@
 <script lang="ts">
-  import { dev } from '$app/environment';
-  import * as Form from '$lib/components/ui/form';
-  import { Input } from '$lib/components/ui/input';
-  import { DEBUG_FORMS } from '$lib/utils.js';
-  import { toast } from 'svelte-sonner';
+  import { dev } from "$app/environment";
+  import * as Form from "$lib/components/ui/shadcn/form";
+  import { Input } from "$lib/components/ui/shadcn/input";
+  import { DEBUG_FORMS } from "$lib/utils.js";
+  import { toast } from "svelte-sonner";
   import {
     type Infer,
     superForm,
     type SuperValidated,
-  } from 'sveltekit-superforms';
-  import SuperDebug from 'sveltekit-superforms';
-  import { zodClient } from 'sveltekit-superforms/adapters';
-  import { type LoginFormSchema, loginFormSchema } from './form-schemas.js';
+  } from "sveltekit-superforms";
+  import SuperDebug from "sveltekit-superforms";
+  import { zodClient } from "sveltekit-superforms/adapters";
+  import { type LoginFormSchema, loginFormSchema } from "./schema.js";
 
   const {
     data,
@@ -25,8 +25,8 @@
     taintedMessage: true,
     onUpdated({ form }) {
       if (form.message) {
-        if (form.message.status === 'error') {
-          toast.error(form.message.text);
+        if (form.message.status === "error") {
+          toast.error("Error", { description: form.message.text });
         }
       }
     },
@@ -40,7 +40,7 @@
 {/if}
 
 <form method="POST" use:enhance>
-  <div class="grid gap-4">
+  <div class="grid gap-2">
     <div class="grid gap-2">
       <Form.Field {form} name="username">
         <Form.Control>
@@ -67,7 +67,7 @@
         <Form.FieldErrors />
       </Form.Field>
     </div>
-    <Form.Button disabled={$delayed} class="w-full">
+    <Form.Button variant="secondary" disabled={$delayed} class="w-full mt-3">
       {#if $delayed}
         Submitting
       {:else}
