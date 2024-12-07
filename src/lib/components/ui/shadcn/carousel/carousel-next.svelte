@@ -1,9 +1,9 @@
 <script lang="ts">
-	import ArrowLeft from "lucide-svelte/icons/arrow-left";
+	import ArrowRight from "lucide-svelte/icons/arrow-right";
 	import type { WithoutChildren } from "bits-ui";
 	import { getEmblaContext } from "./context.js";
 	import { cn } from "$lib/utils.js";
-	import { Button, type Props } from "$lib/components/ui/button/index.js";
+	import { Button, type Props } from "$lib/components/ui/shadcn/button/index.js";
 
 	let {
 		ref = $bindable(null),
@@ -13,7 +13,7 @@
 		...restProps
 	}: WithoutChildren<Props> = $props();
 
-	const emblaCtx = getEmblaContext("<Carousel.Previous/>");
+	const emblaCtx = getEmblaContext("<Carousel.Next/>");
 </script>
 
 <Button
@@ -22,16 +22,16 @@
 	class={cn(
 		"absolute size-8 touch-manipulation rounded-full",
 		emblaCtx.orientation === "horizontal"
-			? "-left-12 top-1/2 -translate-y-1/2"
-			: "-top-12 left-1/2 -translate-x-1/2 rotate-90",
+			? "-right-12 top-1/2 -translate-y-1/2"
+			: "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
 		className
 	)}
-	disabled={!emblaCtx.canScrollPrev}
-	onclick={emblaCtx.scrollPrev}
+	disabled={!emblaCtx.canScrollNext}
+	onclick={emblaCtx.scrollNext}
 	onkeydown={emblaCtx.handleKeyDown}
-	{...restProps}
 	bind:ref
+	{...restProps}
 >
-	<ArrowLeft class="size-4" />
-	<span class="sr-only">Previous slide</span>
+	<ArrowRight class="size-4" />
+	<span class="sr-only">Next slide</span>
 </Button>
