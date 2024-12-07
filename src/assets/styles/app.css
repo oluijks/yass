@@ -9,26 +9,27 @@
     --font-mono: "IBM Plex Mono", monospace;
     --font-heading: "Outfit Variable", sans-serif;
 
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 72.2% 50.6%;
-    --destructive-foreground: 0 0% 98%;
-    --ring: 240 10% 3.9%;
-    --radius: 0.35rem;
+    --background: 221.89 5.2% 95.94%;
+    --foreground: 240 5.88% 10%;
+    --muted: 224.15 36% 86%;
+    --muted-foreground: 226.42 6% 31%;
+    --popover: 226.42 39% 99%;
+    --popover-foreground: 47 70% 0%;
+    --card: 224.15 39% 99%;
+    --card-foreground: 47 70% 0%;
+    --border: 0 0% 80%;
+    --input: 217.36 1.65% 78.88%;
+    --primary: 206.04 65% 48%;
+    --primary-foreground: 221.89 0% 100%;
+    --secondary: 224.15 2.11% 82.71%;
+    --secondary-foreground: 228.68 11% 32%;
+    --accent: 217.36 3.25% 88.07%;
+    --accent-foreground: 233.21 11% 32%;
+    --destructive: 355.47 81.67% 40.65%;
+    --destructive-foreground: 348.68 96% 89%;
+    --ring: 221.89 65% 48%;
+
+    --radius: 0.375rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -41,25 +42,25 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --popover: 240 10% 3.9%;
+    --background: 212 18.25% 15.88%;
+    --foreground: 216 19.48% 88%;
+    --muted: 213.75 11.59% 27.06%;
+    --muted-foreground: 0 0% 63.9%;
+    --popover: 212 18.25% 15.88%;
     --popover-foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
+    --card: 217.5 17.39% 18.04%;
+    --card-foreground: 216 19.48% 88%;
+    --border: 213.75 11.59% 27.06%;
+    --input: 213.75 11.59% 27.06%;
+    --primary: 124.11 41.24% 34.71%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 213.75 11.59% 27.06%;
     --secondary-foreground: 0 0% 98%;
-    --accent: 240 3.7% 15.9%;
+    --accent: 213.75 11.59% 27.06%;
     --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 3.12 74.76% 59.61%;
     --destructive-foreground: 0 0% 98%;
-    --ring: 240 4.9% 83.9%;
+    --ring: 0 0% 83.1%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;

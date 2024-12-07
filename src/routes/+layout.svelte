@@ -21,7 +21,7 @@
 </svelte:head>
 
 <ModeWatcher />
-<Toaster richColors />
+<Toaster richColors position="top-right" />
 
 <div id="app">
   <AppHeader />
@@ -30,3 +30,11 @@
   </main>
   <AppFooter />
 </div>
+
+<style>
+  :global(:where([data-sonner-toast][data-styled="true"])) {
+    font-size: 16px !important;
+    gap: 12px !important;
+    border-radius: calc(var(--radius) - 2px) !important;
+  }
+</style>
