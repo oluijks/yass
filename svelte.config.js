@@ -11,6 +11,10 @@ const config = {
     // @see https://svelte.dev/docs/kit/adapters
     // @see https://svelte.dev/docs/kit/adapter-auto
     adapter: adapter(),
+    version: {
+      name: child_process.execSync("git rev-parse --short HEAD").toString().trim(),
+      // pollInterval: 3000,
+    },
   },
 };
 
