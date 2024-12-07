@@ -20,7 +20,11 @@ const handleAuth: Handle = async ({ event, resolve }) => {
   event.locals.user = user;
   event.locals.session = session;
 
-  return resolve(event);
+  return resolve(event, {
+    preload: ({ type }) => {
+      return type === "font" || type === "js" || type === "css";
+    },
+  });
 };
 
 export const handle: Handle = handleAuth;

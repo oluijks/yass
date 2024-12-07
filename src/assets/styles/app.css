@@ -4,9 +4,9 @@
 
 @layer base {
   :root {
+    --font-sans: "Inter", sans-serif;
     --font-serif: "Lora Variable", serif;
     --font-mono: "IBM Plex Mono", monospace;
-    --font-sans: "Inter Variable", sans-serif;
     --font-heading: "Outfit Variable", sans-serif;
 
     --background: 0 0% 100%;
@@ -72,46 +72,57 @@
   }
 }
 
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
 @layer base {
   @font-face {
-    font-family: "Inter Variable";
-    font-style: italic;
+    font-family: "Inter";
+    font-style: normal;
     font-display: swap;
     font-weight: 100 900;
-    src: url(/fonts/inter-latin-wght-normal.woff2) format("woff2-variations");
+    src: url(../fonts/inter-latin-wght-normal.woff2) format("woff2-variations");
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
       U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
+
   @font-face {
     font-family: "Outfit Variable";
     font-style: normal;
     font-display: swap;
     font-weight: 100 900;
-    src: url(/fonts/outfit-latin-wght-normal.woff2) format("woff2-variations");
+    src: url(../fonts/outfit-latin-wght-normal.woff2) format("woff2-variations");
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
       U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
+
   @font-face {
     font-family: "IBM Plex Mono";
     font-style: normal;
     font-display: swap;
     font-weight: 400;
-    src: url(/fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2");
+    src: url(../fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2");
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
       U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
+
   @font-face {
     font-family: "Lora Variable";
     font-style: normal;
     font-display: swap;
     font-weight: 400 700;
-    src: url(/fonts/lora-latin-wght-normal.woff2) format("woff2-variations");
+    src: url(../fonts/lora-latin-wght-normal.woff2) format("woff2-variations");
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
       U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
+
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground antialiased;
     font-synthesis-weight: none;
@@ -120,8 +131,11 @@
     font-feature-settings:
       "rlig" 1,
       "calt" 1,
-      "cv11" 1;
+      "cv11" 1,
+      "ss02" 1,
+      "zero" 1;
   }
+
   h1,
   h2,
   h3,
