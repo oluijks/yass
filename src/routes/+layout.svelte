@@ -7,22 +7,16 @@
   import { ModeWatcher } from "mode-watcher";
   import "../assets/styles/app.css";
 
-  const {
-    children,
-    data,
-  }: {
-    children: Snippet;
-    data: LayoutServerData;
-  } = $props();
+  const { children } = $props();
 
-  const title = $derived($page.data.meta?.title ?? data.defaultMeta.title);
+  const title = $derived($page.data.meta?.title ?? siteConfig.meta.title);
   const description = $derived(
-    $page.data.meta?.description ?? data.defaultMeta.description,
+    $page.data.meta?.description ?? siteConfig.meta.description,
   );
 </script>
 
 <svelte:head>
-  <title>{title} :: Lorem Forum</title>
+  <title>{title} :: {siteConfig.name}</title>
   <meta name="description" content={description} />
 </svelte:head>
 

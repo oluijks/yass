@@ -1,9 +1,15 @@
 import * as auth from "$lib/server/auth";
 import { fail, redirect } from "@sveltejs/kit";
 
-export const load: PageServerLoad = async (event) => {
-  return { user: event.locals.user };
-};
+export async function load(event) {
+  return {
+    meta: {
+      title: "Home",
+      description: "home page description"
+    },
+    user: event.locals.user
+  };
+}
 
 export const actions = {
   logout: async (event) => {
