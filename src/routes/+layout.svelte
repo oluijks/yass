@@ -1,10 +1,11 @@
 <script lang="ts">
-  import type { Snippet } from 'svelte';
-  import type { LayoutServerData } from './$types';
-  import { page } from '$app/stores';
-  import { Toaster } from '$lib/components/ui/sonner/index.js';
-  import { ModeWatcher } from 'mode-watcher';
-  import '../assets/styles/app.css';
+  import { page } from "$app/stores";
+  import AppFooter from "$lib/components/layout/app-footer.svelte";
+  import AppHeader from "$lib/components/layout/app-header.svelte";
+  import { Toaster } from "$lib/components/ui/shadcn/sonner/index.js";
+  import { siteConfig } from "$lib/config/site.js";
+  import { ModeWatcher } from "mode-watcher";
+  import "../assets/styles/app.css";
 
   const {
     children,

@@ -1,4 +1,4 @@
-import antfu from '@antfu/eslint-config';
+import antfu from "@antfu/eslint-config";
 
 export default antfu(
   {
@@ -7,19 +7,20 @@ export default antfu(
     stylistic: {
       semi: true,
       indent: 2,
+      quotes: "double",
     },
-    ignores: ['src/lib/server/db/migrations/', 'src/lib/components/ui/'],
+    ignores: ["src/lib/server/db/migrations/", "src/lib/components/ui/"],
   },
   {
-    files: ['**/*.svelte'],
+    files: ["**/*.svelte"],
     rules: {
-      'svelte/html-quotes': ['error', { prefer: 'double' }],
+      "svelte/html-quotes": ["error", { prefer: "double" }],
     },
   },
   {
-    files: ['**/*.css'],
+    files: ["**/*.css"],
     rules: {
-      'format/prettier': ['error', { prefer: 'double', printWidth: 120 }],
+      "format/prettier": ["error", { prefer: "double", printWidth: 120 }],
     },
   },
 );
