@@ -30,7 +30,9 @@
 <Toaster richColors />
 
 <div id="app">
+  <AppHeader />
   <main>
     {@render children()}
   </main>
+  <AppFooter />
 </div>
