@@ -5,9 +5,9 @@ export async function load(event) {
   return {
     meta: {
       title: "Home",
-      description: "home page description"
+      description: "home page description",
     },
-    user: event.locals.user
+    user: event.locals.user,
   };
 }
 
