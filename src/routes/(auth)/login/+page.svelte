@@ -19,7 +19,7 @@
       <LoginForm data={data.form} />
     </Card.Content>
     <Card.Footer class="justify-end gap-1">
-      <a href="/register" class="hover:underline hover:underline-offset-4">
+      <a href="/register" class="royal-link hover:underline hover:underline-offset-4">
         Register here
       </a>
     </Card.Footer>

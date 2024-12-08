@@ -153,3 +153,7 @@
   min-height: 100vh;
   min-height: 100dvh;
 }
+
+.royal-link {
+  @apply dark:text-royal-blue-300 text-royal-blue-600;
+}

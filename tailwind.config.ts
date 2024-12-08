@@ -1,3 +1,4 @@
+/* eslint-disable style/quote-props */
 import type { Config } from "tailwindcss";
 import tailwindcssAspectRatio from "@tailwindcss/aspect-ratio";
 import tailwindcssContainerQueries from "@tailwindcss/container-queries";
@@ -19,6 +20,21 @@ const config: Config = {
     },
     extend: {
       colors: {
+        // trying out some oklch colors
+        "royal-blue": {
+          50: "oklch(0.95 0.16 255.68 / <alpha-value>)",
+          100: "oklch(0.9 0.16 255.68 / <alpha-value>)",
+          200: "oklch(0.8 0.16 255.68 / <alpha-value>)",
+          300: "oklch(0.7 0.16 255.68 / <alpha-value>)",
+          400: "oklch(0.6 0.16 255.68 / <alpha-value>)",
+          500: "oklch(0.5 0.16 255.68 / <alpha-value>)",
+          600: "oklch(0.4 0.16 255.68 / <alpha-value>)",
+          700: "oklch(0.3 0.16 255.68 / <alpha-value>)",
+          800: "oklch(0.2 0.16 255.68 / <alpha-value>)",
+          900: "oklch(0.1 0.16 255.68 / <alpha-value>)",
+          950: "oklch(0.05 0.16 255.68 / <alpha-value>)",
+          DEFAULT: "oklch(0.007 0.16 255.68 / <alpha-value>)",
+        },
         border: "hsl(var(--border) / <alpha-value>)",
         input: "hsl(var(--input) / <alpha-value>)",
         ring: "hsl(var(--ring) / <alpha-value>)",
