@@ -2,8 +2,7 @@
   import type { NavItem } from "$lib/types.js";
   import { version as gitHash } from "$app/environment";
   import { page } from "$app/stores";
-  import { Button } from "$lib/components/ui/shadcn/button/index.js";
-  import { cn } from "$lib/utils.js";
+  import NavButton from "./nav-button.svelte";
 
   const appVersion = __VERSION__;
   const svelteVersion = __SVELTE_VERSION__;
@@ -20,16 +19,7 @@
   <div class="footer-container">
     <div>
       {#each footerNavItems as footerNavItem}
-        {@const isActive = $page.url.pathname === footerNavItem.href}
-        <Button
-          variant="link"
-          href={footerNavItem.href}
-          aria-current={isActive ? "page" : undefined}
-          class={cn(
-            "transition-colors hover:text-foreground/80",
-            isActive ? "text-foreground" : "text-foreground/70",
-          )}>{footerNavItem.title}</Button
-        >
+        <NavButton text={footerNavItem.title} href={footerNavItem.href} pathname={$page.url.pathname} />
       {/each}
     </div>
     <p

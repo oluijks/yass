@@ -4,7 +4,7 @@
   import { page } from "$app/stores";
   import { Button } from "$lib/components/ui/shadcn/button/index.js";
   import { Separator } from "$lib/components/ui/shadcn/separator/index.js";
-  import { cn } from "$lib/utils.js";
+  import NavButton from "./nav-button.svelte";
   import ThemeSwitcher from "./theme-switcher.svelte";
 
   // Logic scroll behavior, thanks to Johnny Magrippis (https://www.youtube.com/@jmagrippis)
@@ -33,26 +33,8 @@
   <div class="flex h-14 items-center">
     <div class="flex">
       <nav class="flex items-center">
-        <Button
-          variant="link"
-          href="/"
-          class={cn(
-            "transition-colors hover:text-foreground/80",
-            $page.url.pathname === "/"
-              ? "text-foreground underline-offset-4 underline"
-              : "text-foreground/70",
-          )}>Home</Button
-        >
-        <Button
-          variant="link"
-          href="/about"
-          class={cn(
-            "transition-colors hover:text-foreground/80",
-            $page.url.pathname === "/about"
-              ? "text-foreground underline-offset-4 underline"
-              : "text-foreground/70",
-          )}>About Us</Button
-        >
+        <NavButton text="Home" href="/" pathname={$page.url.pathname} />
+        <NavButton text="About Us" href="/about" pathname={$page.url.pathname} />
       </nav>
     </div>
     <div class="ml-auto flex items-center gap-2">
@@ -62,27 +44,9 @@
         </form>
       {:else}
         <div class="flex items-center">
-          <Button
-            variant="link"
-            href="/login"
-            class={cn(
-              "transition-colors hover:text-foreground/80",
-              $page.url.pathname === "/login"
-                ? "text-foreground underline-offset-4 underline"
-                : "text-foreground/70",
-            )}>Login</Button
-          >
+          <NavButton text="Login" href="/login" pathname={$page.url.pathname} />
           <Separator orientation="vertical" class="h-6" />
-          <Button
-            variant="link"
-            href="/register"
-            class={cn(
-              "transition-colors hover:text-foreground/80",
-              $page.url.pathname === "/register"
-                ? "text-foreground underline-offset-4 underline"
-                : "text-foreground/70",
-            )}>Register</Button
-          >
+          <NavButton text="Register" href="/register" pathname={$page.url.pathname} />
         </div>
       {/if}
       <ThemeSwitcher />
