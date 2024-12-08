@@ -1,5 +1,7 @@
 # Lorem Forum
 
+> Just another project starter for a SvelteKit website.
+
 ## Getting started
 
 - Clone repo
@@ -46,16 +48,21 @@ Restart dev server.
 - Auth (former Lucia)
 - Drizzle ORM/Kit for SQLite
 - ESLint (@antfu/eslint-config)
-- Tailwind CSS, Svelte port of shadcn/ui
+- Tailwind CSS & Svelte port of shadcn/ui
 
 ### Routes
 
-Pages have a basic header with home and about us link and a dark/light switcher and a footer with name and version info.
+Pages have a basic header with home, about, login and register links and a dark/light switcher and a footer with site name, version and last commit info.
 
 - /
 - /login
 - /register
 - /about (csr, prerendered)
-- /terms (csr, prerendered)
-- /policy (csr, prerendered)
-- /cookies (csr, prerendered)
+- /legal/terms (csr, prerendered)
+- /legal/policy (csr, prerendered)
+- /legal/cookies (csr, prerendered)
+
+### Misc
+
+- SEO (global and per page)
+- Local fonts (preloaded in prod)
