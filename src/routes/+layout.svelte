@@ -2,6 +2,7 @@
   import AppFooter from "$lib/components/layout/app-footer.svelte";
   import AppHeader from "$lib/components/layout/app-header.svelte";
   import Metadata from "$lib/components/layout/metadata.svelte";
+  import PageContainer from "$lib/components/layout/page-container.svelte";
   import { Toaster } from "$lib/components/ui/shadcn/sonner/index.js";
   import { ModeWatcher } from "mode-watcher";
   import "../assets/styles/app.css";
@@ -16,7 +17,9 @@
 <div id="app">
   <AppHeader />
   <main>
-    {@render children()}
+    <PageContainer>
+      {@render children()}
+    </PageContainer>
   </main>
   <AppFooter />
 </div>
