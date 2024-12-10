@@ -1,6 +1,6 @@
 # Lorem Forum
 
-> Just another project starter for a SvelteKit website.
+Feel free to fork the repo, open issues, or submit pull requests to help improve it. Whether it's adding new features, optimizing performance, or fixing bugs, any contributions are welcome.
 
 ## Getting started
 
@@ -21,13 +21,13 @@
   pnpm run dev --host 0.0.0.0
   ```
 
-## Building
+### Building
 
 ```bash
 pnpm run build
 ```
 
-## https on localhost
+### HTTPS on localhost
 
 Uncomment the server.https block in `vite.config.ts` and generate `key.pem` and `cert.pem` by running:
 
@@ -46,23 +46,34 @@ Restart dev server.
 ### Packages
 
 - Auth (former Lucia)
-- Drizzle ORM/Kit for SQLite
+- Drizzle ORM/Kit with SQLite
 - ESLint (@antfu/eslint-config)
 - Tailwind CSS & Svelte port of shadcn/ui
 
 ### Routes
 
-Pages have a basic header with home, about, login and register links and a dark/light switcher and a footer with site name, version and last commit info.
+Pages are responsive and have a basic header with home, about, login and register links and a dark/light switcher and a footer with the site name, version and last commit info.
 
 - /
+- /about
 - /login
 - /register
-- /about (csr, prerendered)
-- /legal/terms (csr, prerendered)
-- /legal/policy (csr, prerendered)
-- /legal/cookies (csr, prerendered)
+- /legal/terms
+- /legal/policy
+- /legal/cookies
 
 ### Misc
 
 - SEO (global and per page)
 - Local fonts (preloaded in prod)
+
+## Thanks to
+
+These good people who inspired me and thought me a lot.
+
+- Ben Davis - [https://www.youtube.com/@bmdavis419](https://www.youtube.com/@bmdavis419)
+- Coding2GO - [https://www.youtube.com/@coding2go](https://www.youtube.com/@coding2go)
+- Hunter Johnston - [https://www.youtube.com/@Huntabyte](https://www.youtube.com/@Huntabyte)
+- Johnny Magrippis - [https://www.youtube.com/@johnnifytech](https://www.youtube.com/@johnnifytech)
+- JoyofCodeDev - [https://www.youtube.com/@JoyofCodeDev](https://www.youtube.com/@JoyofCodeDev)
+- Syntax FM - [https://www.youtube.com/@syntaxfm](https://www.youtube.com/@syntaxfm)
