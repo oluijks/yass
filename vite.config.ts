@@ -3,6 +3,7 @@
 // import fs from 'node:fs';
 // import path from 'node:path';
 
+import { enhancedImages } from "@sveltejs/enhanced-img";
 import { sveltekit } from "@sveltejs/kit/vite";
 import { defineConfig } from "vite";
 import viteCompression from "vite-plugin-compression";
@@ -14,6 +15,7 @@ import pkg from "./package.json" with { type: "json" };
 export default defineConfig({
   plugins: [
     sveltekit(),
+    enhancedImages(),
     viteCompression({ algorithm: "brotliCompress" }),
   ],
 
