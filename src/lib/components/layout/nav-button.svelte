@@ -1,16 +1,18 @@
 <script lang="ts">
-  import { Button } from "$lib/components/ui/shadcn/button/index.js";
+  import { Button } from "$lib/components/shadcn/button/index.js";
   import { cn } from "$lib/utils.js";
+
+  type Props = {
+    text: string;
+    href: string;
+    pathname: string;
+  };
 
   const {
     text,
     href,
     pathname,
-  }: {
-    text: string;
-    href: string;
-    pathname: string;
-  } = $props();
+  }: Props = $props();
 </script>
 
 {#snippet navButton({ text, href, pathname }: { text: string; href: string; pathname: string })}

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { buttonVariants } from "$lib/components/ui/shadcn/button/index.js";
-  import * as DropdownMenu from "$lib/components/ui/shadcn/dropdown-menu/index.js";
+  import { buttonVariants } from "$lib/components/shadcn/button/index.js";
+  import * as DropdownMenu from "$lib/components/shadcn/dropdown-menu/index.js";
   import Moon from "lucide-svelte/icons/moon";
   import Sun from "lucide-svelte/icons/sun";
   import { mode, resetMode, setMode } from "mode-watcher";

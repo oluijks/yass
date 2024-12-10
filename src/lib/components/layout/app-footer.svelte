@@ -2,13 +2,14 @@
   import type { NavItem } from "$lib/types.js";
   import { version as gitHash } from "$app/environment";
   import { page } from "$app/stores";
+  import { siteConfig } from "$lib/config/site.js";
   import NavButton from "./nav-button.svelte";
 
   const appVersion = __VERSION__;
   const svelteVersion = __SVELTE_VERSION__;
   const svelteKitVersion = __SVELTEKIT_VERSION__;
 
-  export const footerNavItems: NavItem[] = [
+  export const navItems: NavItem[] = [
     { title: "cookies", href: "/legal/cookies" },
     { title: "policy", href: "/legal/policy" },
     { title: "terms", href: "/legal/terms" },
@@ -18,14 +19,14 @@
 <footer>
   <div class="footer-container">
     <div>
-      {#each footerNavItems as footerNavItem}
-        <NavButton text={footerNavItem.title} href={footerNavItem.href} pathname={$page.url.pathname} />
+      {#each navItems as navItem}
+        <NavButton text={navItem.title} href={navItem.href} pathname={$page.url.pathname} />
       {/each}
     </div>
     <p
       class="flex flex-col md:flex-row items-center gap-1 text-sm text-muted-foreground/85"
     >
-      <span>Lorem Forum v{appVersion} [{gitHash}]</span>
+      <span>{siteConfig.name} v{appVersion} [{gitHash}]</span>
       <span>made with Svelte v{svelteVersion} & SvelteKit v{svelteKitVersion}</span>
     </p>
   </div>

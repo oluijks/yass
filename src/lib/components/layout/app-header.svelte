@@ -2,8 +2,8 @@
   import type { ScrollDirection } from "$lib/types.js";
   import { enhance } from "$app/forms";
   import { page } from "$app/stores";
-  import { Button } from "$lib/components/ui/shadcn/button/index.js";
-  import { Separator } from "$lib/components/ui/shadcn/separator/index.js";
+  import { Button } from "$lib/components/shadcn/button/index.js";
+  import { Separator } from "$lib/components/shadcn/separator/index.js";
   import NavButton from "./nav-button.svelte";
   import ThemeSwitcher from "./theme-switcher.svelte";
 
@@ -18,18 +18,12 @@
     return direction;
   };
   const scrollDirection = $derived(derivedDirection(currentY));
-  const offScreen = $derived(
-    scrollDirection === "down" && currentY > clientHeight * 4,
-  );
+  const offScreen = $derived(scrollDirection === "down" && currentY > clientHeight * 4);
 </script>
 
 <svelte:window bind:scrollY={currentY} />
 
-<header
-  class:motion-safe:-translate-y-full={offScreen}
-  class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 px-4 backdrop-blur supports-[backdrop-filter]:bg-background/60"
-  bind:clientHeight
->
+<header class:motion-safe:-translate-y-full={offScreen} class="sticky-header" bind:clientHeight>
   <div class="flex h-14 items-center">
     <div class="flex">
       <nav class="flex items-center">
@@ -40,7 +34,7 @@
     <div class="ml-auto flex items-center gap-2">
       {#if $page.data.user}
         <form method="post" action="?/logout" use:enhance>
-          <Button type="submit" variant="secondary">Logout</Button>
+          <Button type="submit" variant="link" class="royal-link">Logout</Button>
         </form>
       {:else}
         <div class="flex items-center">
@@ -53,3 +47,9 @@
     </div>
   </div>
 </header>
+
+<style lang="postcss">
+  .sticky-header {
+    @apply sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 px-4 backdrop-blur supports-[backdrop-filter]:bg-background/60;
+  }
+</style>

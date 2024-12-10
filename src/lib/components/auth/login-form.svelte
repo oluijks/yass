@@ -1,7 +1,7 @@
 <script lang="ts">
   import { dev } from "$app/environment";
-  import * as Form from "$lib/components/ui/shadcn/form";
-  import { Input } from "$lib/components/ui/shadcn/input";
+  import * as Form from "$lib/components/shadcn/form";
+  import { Input } from "$lib/components/shadcn/input";
   import { DEBUG_FORMS } from "$lib/utils.js";
   import { toast } from "svelte-sonner";
   import {
