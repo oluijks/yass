@@ -32,7 +32,7 @@ pnpm run build
 Uncomment the server.https block in `vite.config.ts` and generate `key.pem` and `cert.pem` by running:
 
 ```bash
-cd cert
+cd cert/localhost
 mkcert -install
 mkcert -key-file key.pem -cert-file cert.pem localhost
 ```
