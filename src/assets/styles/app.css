@@ -157,3 +157,57 @@
 .royal-link {
   @apply dark:text-royal-blue-300 text-royal-blue-600;
 }
+
+/* Animated Borders, thanks to Coding2GO (https://www.youtube.com/watch?v=ezP4kbOvs_E) */
+.border-glow {
+  position: relative;
+  padding: 5px;
+  border-radius: calc(var(--radius) + 2px);
+  @media (min-width: 768px) {
+    max-width: 28rem /* 448px */;
+  }
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.border-glow::after,
+.border-glow::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 5px;
+  border-radius: calc(var(--radius) + 2px);
+  background-image: conic-gradient(from var(--angle), transparent 70%, oklch(0.4 0.16 255.68));
+  animation: 6s spin linear infinite;
+}
+@media (prefers-reduced-motion) {
+  .border-glow::after,
+  .border-glow::before {
+    background-image: conic-gradient(from var(--angle), transparent 100%, oklch(0.4 0.16 255.68));
+    animation: none;
+  }
+}
+.border-glow::before {
+  opacity: 0.5;
+  filter: blur(1rem);
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+.full-bleed {
+  margin: 0 calc(50% - 50vw);
+  padding: 0 calc(50vw - 50%);
+}
