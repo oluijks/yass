@@ -9,7 +9,7 @@
   import { ModeWatcher } from "mode-watcher";
   import "../assets/styles/app.css";
 
-  const { children, data } = $props();
+  const { children } = $props();
   setAppState();
 
   // Subtle page transitions (see style block below)
