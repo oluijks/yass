@@ -28,7 +28,10 @@
     <div class="flex">
       <nav class="flex items-center">
         <NavButton text="Home" href="/" pathname={$page.url.pathname} />
-        <NavButton text="About Us" href="/about" pathname={$page.url.pathname} />
+        <NavButton text="About" href="/about" pathname={$page.url.pathname} />
+        {#if $page.data.user}
+          <NavButton text="Settings" href="/settings" pathname={$page.url.pathname} />
+        {/if}
       </nav>
     </div>
     <div class="ml-auto flex items-center gap-2">
