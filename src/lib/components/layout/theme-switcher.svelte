@@ -4,7 +4,6 @@
   import Moon from "lucide-svelte/icons/moon";
   import Sun from "lucide-svelte/icons/sun";
   import { mode, resetMode, setMode } from "mode-watcher";
-  import { onMount } from "svelte";
 
   const handleModeChange = () => {
     if ($mode === "light") {
@@ -17,7 +16,7 @@
     }
   };
 
-  onMount(() => {
+  $effect(() => {
     if ($mode !== "light")
       document.documentElement.classList.add("cc--darkmode");
   });
