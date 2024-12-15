@@ -45,6 +45,10 @@ mkcert -key-file key.pem -cert-file cert.pem localhost
 
 Restart dev server.
 
+### Bugs
+
+- [ ] Auth doesn't work on mobile, at least for me. Queries are fired and even a sesson record is created, but `locals.user` and `locals.session` are empty. Have to investigate further...
+
 ---
 
 ## What's included?
