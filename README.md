@@ -1,4 +1,4 @@
-# YaSS (Yet another sveltekit starter)
+# Yass (Yet another sveltekit starter)
 
 Feel free to fork the repo, open issues, or submit pull requests to help improve it. Whether it's adding new features, optimizing performance, or fixing bugs, any contributions are welcome.
 
@@ -44,10 +44,6 @@ mkcert -key-file key.pem -cert-file cert.pem localhost
 ```
 
 Restart dev server.
-
-### Bugs
-
-- [ ] Auth doesn't work on mobile, at least for me. Queries are fired and even a sesson record is created, but `locals.user` and `locals.session` are empty. Have to investigate further...
 
 ---
 

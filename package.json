@@ -2,6 +2,7 @@
   "name": "yass",
   "type": "module",
   "version": "0.1.0",
+  "description": "Yet another sveltekit starter",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -13,7 +14,8 @@
     "db:push": "drizzle-kit push",
     "db:migrate": "drizzle-kit migrate",
     "db:generate": "drizzle-kit generate",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "sys:info": "npx envinfo --system --binaries --browsers --npmPackages \"{svelte,@sveltejs/*,vite}\""
   },
   "dependencies": {
     "@node-rs/argon2": "^2.0.2",
