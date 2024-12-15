@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Lorem Forum",
+  name: "Yass",
   url: "https://lorem-forum.com",
   meta: {
     title: "site title",
