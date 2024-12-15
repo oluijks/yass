@@ -49,6 +49,9 @@
 </header>
 
 <style lang="postcss">
+  header {
+    view-transition-name: app-header;
+  }
   .sticky-header {
     @apply sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 px-4 backdrop-blur supports-[backdrop-filter]:bg-background/60;
   }

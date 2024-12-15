@@ -35,6 +35,7 @@
 <style lang="postcss">
   footer {
     @apply mt-auto border-t border-border/40 bg-background p-2;
+    view-transition-name: app-footer;
   }
   .footer-container {
     @apply flex flex-col items-center gap-2 p-2;
