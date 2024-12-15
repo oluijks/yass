@@ -1,9 +1,11 @@
 <script lang="ts">
   import RegisterForm from "$lib/components/auth/register-form.svelte";
   import * as Card from "$lib/components/shadcn/card/index.js";
+  import { getAppState } from "$lib/state/app.svelte.js";
 
-  const animated = true;
   const { data } = $props();
+  const appState = getAppState();
+  const animated = $derived(appState.animationsEnabled);
 </script>
 
 <div class:border-glow={animated} class="w-full md:max-w-md mx-auto mt-6 lg:mt-24">
