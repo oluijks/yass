@@ -7,6 +7,16 @@
   const description = $derived($page.data.meta?.description ?? siteConfig.meta.description);
 </script>
 
+<!--
+@component
+A component that will add metadata tags to the document.head
+
+- Usage:
+  ```tsx
+  <Metatdata />
+  ```
+-->
+
 <svelte:head>
   <title>{title} :: {siteConfig.name}</title>
   <meta name="description" content={description} />

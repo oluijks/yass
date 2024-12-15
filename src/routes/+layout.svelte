@@ -46,6 +46,7 @@
 </div>
 
 <style>
+  /* Some hack to override some styles for the sonner toasts */
   :global(:where([data-sonner-toast][data-styled="true"])) {
     font-size: 16px !important;
     gap: 12px !important;

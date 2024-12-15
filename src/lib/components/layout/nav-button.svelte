@@ -15,6 +15,16 @@
   }: Props = $props();
 </script>
 
+<!--
+@component
+A component that will render a link button
+
+- Usage:
+  ```tsx
+  <NavButton text="Home" href="/" pathname={$page.url.pathname} />
+  ```
+-->
+
 {#snippet navButton({ text, href, pathname }: { text: string; href: string; pathname: string })}
   {@const isActive = pathname === href}
   <Button

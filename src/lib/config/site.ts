@@ -8,7 +8,7 @@ export const siteConfig = {
   },
   links: {
     social: {
-      github: "https://github.com",
+      github: "https://github.com/oluijks/yass",
       twitter: "https://twitter.com",
       facebook: "https://www.facebook.com",
     },

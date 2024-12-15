@@ -1,6 +1,8 @@
-<h1 class="scroll-m-20 text-3xl lg:text-4xl mb-8">Privacy Policy</h1>
+<div class="full-bleed bg-pink-800 mb-8">
+  <h1 class="scroll-m-20 text-3xl lg:text-4xl py-6">Privacy Policy</h1>
+</div>
 
-<p class="text-muted-foreground text-xl">
+<p class="text-muted-foreground text-xl pt-8">
   This Privacy Policy explains how we collect, use, and protect your personal information when you interact with this website.
 </p>
 

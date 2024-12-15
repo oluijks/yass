@@ -23,9 +23,7 @@
         <NavButton text={navItem.title} href={navItem.href} pathname={$page.url.pathname} />
       {/each}
     </div>
-    <p
-      class="flex flex-col md:flex-row items-center gap-1 text-sm text-muted-foreground/85"
-    >
+    <p class="flex flex-col md:flex-row items-center gap-1 text-sm text-muted-foreground/85">
       <span>{siteConfig.name} v{appVersion} [{gitHash}]</span>
       <span>made with Svelte v{svelteVersion} & SvelteKit v{svelteKitVersion}</span>
     </p>
