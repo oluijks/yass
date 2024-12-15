@@ -9,7 +9,7 @@ export default antfu(
       indent: 2,
       quotes: "double",
     },
-    ignores: ["src/lib/server/db/migrations/", "src/lib/components/ui/"],
+    ignores: ["src/lib/server/db/migrations/", "src/lib/components/shadcn/"],
   },
   {
     files: ["**/*.svelte"],
