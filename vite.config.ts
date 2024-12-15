@@ -1,10 +1,11 @@
 /* eslint-disable antfu/no-import-node-modules-by-path */
 
-// import fs from 'node:fs';
-// import path from 'node:path';
+// import fs from "node:fs";
+// import path from "node:path";
 
 import { enhancedImages } from "@sveltejs/enhanced-img";
 import { sveltekit } from "@sveltejs/kit/vite";
+import { visualizer } from "rollup-plugin-visualizer";
 import { defineConfig } from "vite";
 import viteCompression from "vite-plugin-compression";
 
@@ -17,6 +18,10 @@ export default defineConfig({
     sveltekit(),
     enhancedImages(),
     viteCompression({ algorithm: "brotliCompress" }),
+    visualizer({
+      emitFile: true,
+      filename: "stats.html",
+    }),
   ],
 
   define: {
@@ -28,8 +33,10 @@ export default defineConfig({
 
   // server: {
   //   https: {
-  //     key: fs.readFileSync(path.join(__dirname, '/cert/key.pem')),
-  //     cert: fs.readFileSync(path.join(__dirname, '/cert/cert.pem')),
+  //     key: fs.readFileSync(path.join(__dirname, "/cert/luba.dev/private.key.pem")),
+  //     cert: fs.readFileSync(path.join(__dirname, "/cert/luba.dev/domain.cert.pem")),
+  //     key: fs.readFileSync(path.join(__dirname, "/cert/localhost/key.pem")),
+  //     cert: fs.readFileSync(path.join(__dirname, "/cert/localhost/cert.pem")),
   //   },
   //   proxy: {},
   // },
