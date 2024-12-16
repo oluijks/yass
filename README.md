@@ -1,8 +1,16 @@
-# Yass (Yet another sveltekit starter)
+# Yass
+
+> Yet another sveltekit starter.
 
 Feel free to fork the repo, open issues, or submit pull requests to help improve it. Whether it's adding new features, optimizing performance, or fixing bugs, any contributions are welcome.
 
 In various places in the code I placed comments where you might want to make adjustments to make it your own.
+
+## Disclaimer
+
+This project is not ready for production use. It is primarily created for educational purposes and to demonstrate certain concepts or techniques. While the code may work as expected in a controlled environment, it may not be stable, secure, or optimized for real-world applications.
+
+Please use this repository as a learning resource, and exercise caution if you decide to use or modify the code for any production environments.
 
 ## Getting started
 
