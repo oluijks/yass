@@ -4,8 +4,6 @@
 
 Feel free to fork the repo, open issues, or submit pull requests to help improve it. Whether it's adding new features, optimizing performance, or fixing bugs, any contributions are welcome.
 
-In various places in the code I placed comments where you might want to make adjustments to make it your own.
-
 ## Disclaimer
 
 This project is not ready for production use. It is primarily created for educational purposes and to demonstrate certain concepts or techniques. While the code may work as expected in a controlled environment, it may not be stable, secure, or optimized for real-world applications.
@@ -37,9 +35,9 @@ Please use this repository as a learning resource, and exercise caution if you d
 pnpm run build
 ```
 
-By enabling the Rollup Visualizer plugin in vite.config.ts, you can analyze your bundle by viewing the .svelte-kit/output/server/stats.html and .svelte-kit/output/client/stats.html files to identify which modules consume the most space.
+By enabling the Rollup Visualizer plugin in `vite.config.ts`, you can analyze your bundle by viewing the `.svelte-kit/output/server/stats.html` and `.svelte-kit/output/client/stats.html` files to identify which modules consume the most space.
 
-Alternatively, you can enable the Vite Compression plugin in vite.config.ts to generate compressed build files using the gzip or Brotli algorithm.
+Alternatively, you can enable the Vite Compression plugin in `vite.config.ts` to generate compressed build files using the gzip or Brotli algorithm.
 
 ### HTTPS on localhost
 
