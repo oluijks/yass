@@ -37,9 +37,9 @@ Please use this repository as a learning resource, and exercise caution if you d
 pnpm run build
 ```
 
-If you have enabled Rollup Plugin Visualizer in `vite.config.ts` you can open `.svelte-kit/output/server/stats.html` and `.svelte-kit/output/client/stats.html` to analyze your bundle to see which modules are taking up space.
+By enabling the Rollup Visualizer plugin in vite.config.ts, you can analyze your bundle by viewing the .svelte-kit/output/server/stats.html and .svelte-kit/output/client/stats.html files to identify which modules consume the most space.
 
-Optionally you can enable Vite Compression plugin in `vite.config.ts` and use gzip or brotli algorithm to generate compressed versions of your build files.
+Alternatively, you can enable the Vite Compression plugin in vite.config.ts to generate compressed build files using the gzip or Brotli algorithm.
 
 ### HTTPS on localhost
 
@@ -71,7 +71,7 @@ Restart dev server.
 
 ### Routes
 
-Pages are responsive and have a basic header with home, about, login and register links and a dark/light switcher and a footer with the site name, version and last commit info.
+The pages are responsive and include a basic header with links for Home, About, Login, and Register, along with a dark/light mode switcher. The footer displays the site name, version, and details of the last commit.
 
 - /
 - /about
@@ -90,7 +90,7 @@ Pages are responsive and have a basic header with home, about, login and registe
 
 ## Thanks to
 
-These good people who inspired me and thought me a lot about svelte and css:
+These amazing individuals inspired me and taught me so much about Svelte and CSS:
 
 - Ben Davis - [https://www.youtube.com/@bmdavis419](https://www.youtube.com/@bmdavis419)
 - Coding2GO - [https://www.youtube.com/@coding2go](https://www.youtube.com/@coding2go)
