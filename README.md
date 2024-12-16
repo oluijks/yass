@@ -37,7 +37,9 @@ Please use this repository as a learning resource, and exercise caution if you d
 pnpm run build
 ```
 
-Open `.svelte-kit/output/server/stats.html` to analyze your bundle to see which modules are taking up space.
+If you have enabled Rollup Plugin Visualizer in `vite.config.ts` you can open `.svelte-kit/output/server/stats.html` and `.svelte-kit/output/client/stats.html` to analyze your bundle to see which modules are taking up space.
+
+Optionally you can enable Vite Compression plugin in `vite.config.ts` and use gzip or brotli algorithm to generate compressed versions of your build files.
 
 ### HTTPS on localhost
 
@@ -65,6 +67,7 @@ Restart dev server.
 - Tailwind CSS & Svelte port of shadcn/ui
 - Enhanced Images (@sveltejs/enhanced-img)
 - Rollup Plugin Visualizer (rollup-plugin-visualizer)
+- Vite Compression (gzip/brotli) (vite-plugin-compression)
 
 ### Routes
 

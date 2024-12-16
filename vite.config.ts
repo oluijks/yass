@@ -5,9 +5,10 @@
 
 import { enhancedImages } from "@sveltejs/enhanced-img";
 import { sveltekit } from "@sveltejs/kit/vite";
-import { visualizer } from "rollup-plugin-visualizer";
 import { defineConfig } from "vite";
-import viteCompression from "vite-plugin-compression";
+
+// import { visualizer } from "rollup-plugin-visualizer";
+// import viteCompression from "vite-plugin-compression";
 
 import svelteKitPackage from "./node_modules/@sveltejs/kit/package.json" with { type: "json" };
 import sveltePackage from "./node_modules/svelte/package.json" with { type: "json" };
@@ -17,11 +18,11 @@ export default defineConfig({
   plugins: [
     sveltekit(),
     enhancedImages(),
-    viteCompression({ algorithm: "brotliCompress" }),
-    visualizer({
-      emitFile: true,
-      filename: "stats.html",
-    }),
+    // viteCompression({ algorithm: "brotliCompress" }),
+    // visualizer({
+    //   emitFile: true,
+    //   filename: "stats.html",
+    // }),
   ],
 
   define: {
