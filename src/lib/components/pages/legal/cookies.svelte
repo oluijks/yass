@@ -1,4 +1,6 @@
-<h1 class="scroll-m-20 text-3xl lg:text-4xl mb-8">Cookie Policy</h1>
+<h1 class="scroll-m-20 text-3xl lg:text-4xl mb-4">Cookie Policy</h1>
+
+<p class="text-muted-foreground mb-6">Effective Date: 01/01/2025</p>
 
 <p class="text-muted-foreground text-xl">
   This Cookie Policy explains how we use cookies and similar technologies on our website. By using this demo, you consent to the use of cookies as described in this policy.

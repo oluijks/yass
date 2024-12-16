@@ -1,4 +1,6 @@
-<h1 class="scroll-m-20 text-3xl lg:text-4xl mb-8">Terms and Conditions</h1>
+<h1 class="scroll-m-20 text-3xl lg:text-4xl mb-4">Terms and Conditions</h1>
+
+<p class="text-muted-foreground mb-6">Effective Date: 01/01/2025</p>
 
 <p class="text-muted-foreground text-xl">
   By using this website, you agree to the following terms and conditions:

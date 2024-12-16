@@ -1,9 +1,13 @@
 <script lang="ts">
   import type { ScrollDirection } from "$lib/types.js";
   import { enhance } from "$app/forms";
+  import { goto } from "$app/navigation";
   import { page } from "$app/stores";
-  import { Button } from "$lib/components/shadcn/button/index.js";
+  import { Button, buttonVariants } from "$lib/components/shadcn/button/index.js";
+  import * as DropdownMenu from "$lib/components/shadcn/dropdown-menu/index.js";
   import { Separator } from "$lib/components/shadcn/separator/index.js";
+  import { siteConfig } from "$lib/config/site";
+  import { GithubLogo, SignIn } from "phosphor-svelte";
   import NavButton from "./nav-button.svelte";
   import ThemeSwitcher from "./theme-switcher.svelte";
 
@@ -41,12 +45,29 @@
         </form>
       {:else}
         <div class="flex items-center">
-          <NavButton text="Login" href="/login" pathname={$page.url.pathname} />
-          <Separator orientation="vertical" class="h-6" />
-          <NavButton text="Register" href="/register" pathname={$page.url.pathname} />
+          <!-- Dropdown menu on small screens -->
+          <div class="md:hidden">
+            <DropdownMenu.Root>
+              <DropdownMenu.Trigger class={buttonVariants({ variant: "ghost", size: "icon" })}>
+                <SignIn weight="bold" class="!h-[1.2rem] !w-[1.2rem]" />
+              </DropdownMenu.Trigger>
+              <DropdownMenu.Content align="end">
+                <DropdownMenu.Item onclick={() => goto("/login")}>Login</DropdownMenu.Item>
+                <DropdownMenu.Item onclick={() => goto("/register")}>Register</DropdownMenu.Item>
+              </DropdownMenu.Content>
+            </DropdownMenu.Root>
+          </div>
+          <div class="hidden md:flex items-center">
+            <NavButton text="Login" href="/login" pathname={$page.url.pathname} />
+            <Separator orientation="vertical" class="h-6 flex" />
+            <NavButton text="Register" href="/register" pathname={$page.url.pathname} />
+          </div>
         </div>
       {/if}
       <ThemeSwitcher />
+      <Button variant="outline" size="icon" href={siteConfig.links.social.github} target="_blank">
+        <GithubLogo weight="duotone" class="!h-[1.2rem] !w-[1.2rem]" />
+      </Button>
     </div>
   </div>
 </header>
@@ -56,6 +77,6 @@
     view-transition-name: app-header;
   }
   .sticky-header {
-    @apply sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 px-4 backdrop-blur supports-[backdrop-filter]:bg-background/60;
+    @apply sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 px-2 backdrop-blur supports-[backdrop-filter]:bg-background/60;
   }
 </style>

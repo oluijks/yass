@@ -6,12 +6,14 @@
     text: string;
     href: string;
     pathname: string;
+    className?: string | null | undefined;
   };
 
   const {
     text,
     href,
     pathname,
+    className,
   }: Props = $props();
 </script>
 
@@ -25,13 +27,14 @@ A component that will render a link button
   ```
 -->
 
-{#snippet navButton({ text, href, pathname }: { text: string; href: string; pathname: string })}
+{#snippet navButton({ text, href, pathname, className }: Props)}
   {@const isActive = pathname === href}
   <Button
     variant="link"
     {href}
     aria-current={isActive ? "page" : undefined}
     class={cn(
+      className,
       "transition-colors hover:text-foreground/80",
       pathname === href
         ? "text-foreground underline-offset-4 underline"
@@ -41,4 +44,4 @@ A component that will render a link button
   </Button>
 {/snippet}
 
-{@render navButton({ text, href, pathname })}
+{@render navButton({ text, href, pathname, className })}

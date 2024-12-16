@@ -1,8 +1,8 @@
-<div class="full-bleed bg-pink-800 mb-8">
-  <h1 class="scroll-m-20 text-3xl lg:text-4xl py-6">Privacy Policy</h1>
-</div>
+<h1 class="scroll-m-20 text-3xl lg:text-4xl mb-4">Privacy Policy</h1>
 
-<p class="text-muted-foreground text-xl pt-8">
+<p class="text-muted-foreground mb-6">Effective Date: 01/01/2025</p>
+
+<p class="text-muted-foreground text-xl">
   This Privacy Policy explains how we collect, use, and protect your personal information when you interact with this website.
 </p>
 
