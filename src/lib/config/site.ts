@@ -1,6 +1,7 @@
+// Change these values to match your project
 export const siteConfig = {
   name: "Yass",
-  url: "https://lorem-forum.com",
+  url: "http://localhost:5173",
   meta: {
     title: "site title",
     description: "site description",
