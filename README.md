@@ -29,6 +29,10 @@ Please use this repository as a learning resource, and exercise caution if you d
   pnpm run dev --host 0.0.0.0
   ```
 
+### Site configuration
+
+Change the dummy values in `src/lib/config/site.ts` with your own information. You can add more items if you need to.
+
 ### Building
 
 ```bash
