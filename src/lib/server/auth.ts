@@ -1,4 +1,5 @@
 import type { RequestEvent } from "@sveltejs/kit";
+import { dev } from "$app/environment";
 import { db } from "$lib/server/db";
 import * as table from "$lib/server/db/schema";
 import { sha256 } from "@oslojs/crypto/sha2";
@@ -70,6 +71,7 @@ export async function invalidateSession(sessionId: string) {
 export function setSessionTokenCookie(event: RequestEvent, token: string, expiresAt: Date) {
   event.cookies.set(sessionCookieName, token, {
     expires: expiresAt,
+    secure: !dev,
     path: "/",
   });
 }
