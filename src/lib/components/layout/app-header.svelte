@@ -6,7 +6,7 @@
   import { Button, buttonVariants } from "$lib/components/shadcn/button/index.js";
   import * as DropdownMenu from "$lib/components/shadcn/dropdown-menu/index.js";
   import { Separator } from "$lib/components/shadcn/separator/index.js";
-  import { siteConfig } from "$lib/config/site";
+  import { siteConfig } from "$lib/config/site.js";
   import { GithubLogo, SignIn } from "phosphor-svelte";
   import NavButton from "./nav-button.svelte";
   import ThemeSwitcher from "./theme-switcher.svelte";
