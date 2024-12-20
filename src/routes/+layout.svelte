@@ -4,6 +4,7 @@
   import AppHeader from "$lib/components/layout/app-header.svelte";
   import Metadata from "$lib/components/layout/metadata.svelte";
   import PageContainer from "$lib/components/layout/page-container.svelte";
+  import TailwindIndicator from "$lib/components/layout/tailwind-indicator.svelte";
   import { Toaster } from "$lib/components/shadcn/sonner/index.js";
   import { setAppState } from "$lib/state/app.svelte.js";
   import { ModeWatcher } from "mode-watcher";
@@ -43,6 +44,7 @@
     </PageContainer>
   </main>
   <AppFooter />
+  <TailwindIndicator />
 </div>
 
 <style>
