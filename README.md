@@ -75,6 +75,8 @@ Restart dev server.
 
 The pages are responsive and include a basic header with links for Home, About, Login, and Register, along with a dark/light mode switcher. The footer displays the site name, version, and details of the last commit.
 
+The home page comes with a hero and features section.
+
 - /
 - /about
 - /settings
