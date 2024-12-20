@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { page } from "$app/stores";
+  import { page } from "$app/state";
   import { siteConfig } from "$lib/config/site.js";
 
-  const title = $derived($page.data.meta?.title ?? siteConfig.meta.title);
-  const keywords = $derived($page.data.meta?.keywords ?? siteConfig.meta.keywords);
-  const description = $derived($page.data.meta?.description ?? siteConfig.meta.description);
+  const title = $derived(page.data.meta?.title ?? siteConfig.meta.title);
+  const keywords = $derived(page.data.meta?.keywords ?? siteConfig.meta.keywords);
+  const description = $derived(page.data.meta?.description ?? siteConfig.meta.description);
 </script>
 
 <!--
