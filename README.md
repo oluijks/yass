@@ -29,6 +29,20 @@ Please use this repository as a learning resource, and exercise caution if you d
   pnpm run dev --host 0.0.0.0
   ```
 
+### HTTPS on localhost
+
+See [https://github.com/FiloSottile/mkcert](https://github.com/FiloSottile/mkcert)
+
+Uncomment the server.https block in `vite.config.ts` and generate `key.pem` and `cert.pem` by running:
+
+```bash
+mkdir -p cert/localhost && cd $_
+mkcert -install
+mkcert -key-file key.pem -cert-file cert.pem localhost
+```
+
+Restart dev server.
+
 ### Site configuration
 
 Change the dummy values in `src/lib/config/site.ts` with your own information. You can add more items if you need to.
@@ -43,19 +57,11 @@ By enabling the Rollup Visualizer plugin in `vite.config.ts`, you can analyze yo
 
 Alternatively, you can enable the Vite Compression plugin in `vite.config.ts` to generate compressed build files using the gzip or Brotli algorithm.
 
-### HTTPS on localhost
+### Deploying
 
-See [https://github.com/FiloSottile/mkcert](https://github.com/FiloSottile/mkcert)
+You can deploy the site to various platforms, such as Render, Fly.io, Vercel, Netlify, or Cloudflare Pages. Make sure to configure the environment variables and settings accordingly and use the correct SvelteKit Adapter.
 
-Uncomment the server.https block in `vite.config.ts` and generate `key.pem` and `cert.pem` by running:
-
-```bash
-mkdir -p cert/localhost && cd $_
-mkcert -install
-mkcert -key-file key.pem -cert-file cert.pem localhost
-```
-
-Restart dev server.
+If you want to make use of a SQLite database, you may need to set up a persistent storage solution or use a different database provider like Turso. Be sure to check out their and Drizzle documentation for more information on how to set up and configure the database.
 
 ---
 
