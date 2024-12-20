@@ -2,7 +2,7 @@
   import type { ScrollDirection } from "$lib/types.js";
   import { enhance } from "$app/forms";
   import { goto } from "$app/navigation";
-  import { page } from "$app/stores";
+  import { page } from "$app/state";
   import { Button, buttonVariants } from "$lib/components/shadcn/button/index.js";
   import * as DropdownMenu from "$lib/components/shadcn/dropdown-menu/index.js";
   import { Separator } from "$lib/components/shadcn/separator/index.js";
@@ -31,10 +31,10 @@
   <div class="flex h-14 items-center">
     <div class="flex">
       <nav class="flex items-center">
-        <NavButton text="Home" href="/" pathname={$page.url.pathname} />
-        <NavButton text="About" href="/about" pathname={$page.url.pathname} />
-        {#if $page.data.user}
-          <NavButton text="Settings" href="/settings" pathname={$page.url.pathname} />
+        <NavButton text="Home" href="/" pathname={page.url.pathname} />
+        <NavButton text="About" href="/about" pathname={page.url.pathname} />
+        {#if page.data.user}
+          <NavButton text="Settings" href="/settings" pathname={page.url.pathname} />
         {/if}
       </nav>
     </div>
@@ -58,9 +58,9 @@
             </DropdownMenu.Root>
           </div>
           <div class="hidden md:flex items-center">
-            <NavButton text="Login" href="/login" pathname={$page.url.pathname} />
+            <NavButton text="Login" href="/login" pathname={page.url.pathname} />
             <Separator orientation="vertical" class="h-6 flex" />
-            <NavButton text="Register" href="/register" pathname={$page.url.pathname} />
+            <NavButton text="Register" href="/register" pathname={page.url.pathname} />
           </div>
         </div>
       {/if}

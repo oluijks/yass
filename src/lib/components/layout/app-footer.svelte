@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { NavItem } from "$lib/types.js";
   import { version as gitHash } from "$app/environment";
-  import { page } from "$app/stores";
+  import { page } from "$app/state";
   import { siteConfig } from "$lib/config/site.js";
   import NavButton from "./nav-button.svelte";
 
@@ -20,7 +20,7 @@
   <div class="footer-container">
     <div>
       {#each navItems as navItem}
-        <NavButton text={navItem.title} href={navItem.href} pathname={$page.url.pathname} />
+        <NavButton text={navItem.title} href={navItem.href} pathname={page.url.pathname} />
       {/each}
     </div>
     <p class="flex flex-col md:flex-row items-center gap-1 text-sm text-muted-foreground/85 px-4 py-2">
