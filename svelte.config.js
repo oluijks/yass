@@ -8,6 +8,10 @@ const config = {
   preprocess: vitePreprocess(),
 
   kit: {
+    alias: {
+      $assets: "src/assets",
+    },
+
     // @see https://svelte.dev/docs/kit/adapters
     // @see https://svelte.dev/docs/kit/adapter-auto
     adapter: adapter(),
