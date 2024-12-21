@@ -8,7 +8,7 @@
   import { Toaster } from "$lib/components/shadcn/sonner/index.js";
   import { setAppState } from "$lib/state/app.svelte.js";
   import { ModeWatcher } from "mode-watcher";
-  import "../assets/styles/app.css";
+  import "$assets/styles/app.css";
 
   const { children } = $props();
   setAppState();
