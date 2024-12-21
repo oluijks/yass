@@ -28,7 +28,7 @@
 <svelte:window bind:scrollY={currentY} />
 
 <header class:motion-safe:-translate-y-full={offScreen} class="sticky-header" bind:clientHeight>
-  <div class="flex h-14 items-center">
+  <div class="flex h-16 items-center">
     <div class="flex">
       <nav class="flex items-center">
         <NavButton text="Home" href="/" pathname={page.url.pathname} />
@@ -38,8 +38,8 @@
         {/if}
       </nav>
     </div>
-    <div class="ml-auto flex items-center gap-2">
-      {#if $page.data.user}
+    <div class="ml-auto pr-2 flex items-center gap-2">
+      {#if page.data.user}
         <form method="post" action="?/logout" use:enhance>
           <Button type="submit" variant="link" class="royal-link">Logout</Button>
         </form>
@@ -48,7 +48,11 @@
           <!-- Dropdown menu on small screens -->
           <div class="md:hidden">
             <DropdownMenu.Root>
-              <DropdownMenu.Trigger class={buttonVariants({ variant: "ghost", size: "icon" })}>
+              <DropdownMenu.Trigger
+                role="button"
+                aria-label="Login or Register"
+                class={buttonVariants({ variant: "ghost", size: "icon" })}
+              >
                 <SignIn weight="bold" class="!h-[1.2rem] !w-[1.2rem]" />
               </DropdownMenu.Trigger>
               <DropdownMenu.Content align="end">
@@ -65,7 +69,13 @@
         </div>
       {/if}
       <ThemeSwitcher />
-      <Button variant="outline" size="icon" href={siteConfig.links.social.github} target="_blank">
+      <Button
+        size="icon"
+        variant="ghost"
+        href={siteConfig.links.social.github}
+        aria-label="Visit Github Repository"
+        target="_blank"
+      >
         <GithubLogo weight="duotone" class="!h-[1.2rem] !w-[1.2rem]" />
       </Button>
     </div>

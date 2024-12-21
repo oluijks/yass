@@ -1,3 +1,7 @@
-<h1 class="scroll-m-20 text-3xl lg:text-4xl mb-8">
-  Welcome
-</h1>
+<script lang="ts">
+  import FeaturesSection from "$lib/components/pages/home-page/features-section.svelte";
+  import HeroSection from "$lib/components/pages/home-page/hero-section.svelte";
+</script>
+
+<HeroSection />
+<FeaturesSection />

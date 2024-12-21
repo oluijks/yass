@@ -24,7 +24,7 @@
       {/each}
     </div>
     <p class="flex flex-col md:flex-row items-center gap-1 text-sm text-muted-foreground/85 px-4 py-2">
-      <span>{siteConfig.name} v{appVersion} <a href="{siteConfig.links.social.github}/commit/{gitHash}" class="royal-link" target="_blank">[{gitHash}]</a></span>
+      <span>{siteConfig.name} v{appVersion} [{gitHash}]</span>
       <span>made with Svelte v{svelteVersion} & SvelteKit v{svelteKitVersion}</span>
     </p>
   </div>

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/**
+ * base layer is for things like reset rules or default styles applied to plain HTML elements
+ * components layer is for class-based styles that you want to be able to override with utilities
+ * utilities layer is for small, single-purpose classes that should always take precedence over any other styles
+ */
+
 @layer base {
   :root {
     --font-sans: "Inter", sans-serif;
@@ -19,7 +25,7 @@
     --card-foreground: 47 70% 0%;
     --border: 0 0% 80%;
     --input: 217.36 1.65% 78.88%;
-    --primary: 206.04 65% 48%;
+    --primary: 211 85% 40%;
     --primary-foreground: 221.89 0% 100%;
     --secondary: 224.15 2.11% 82.71%;
     --secondary-foreground: 228.68 11% 32%;
@@ -147,15 +153,19 @@
   }
 }
 
+/* Not sure if this is the right place for a class like this */
+/* I've seen people putting it in the utilities or no layer  */
+@layer components {
+  .royal-link {
+    @apply dark:text-royal-blue-200 text-royal-blue-600;
+  }
+}
+
 #app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   min-height: 100dvh;
-}
-
-.royal-link {
-  @apply dark:text-royal-blue-300 text-royal-blue-600;
 }
 
 /* Animated Borders, thanks to Coding2GO (https://www.youtube.com/watch?v=ezP4kbOvs_E) */
