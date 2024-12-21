@@ -5,7 +5,8 @@
 
 import { enhancedImages } from "@sveltejs/enhanced-img";
 import { sveltekit } from "@sveltejs/kit/vite";
-import { defineConfig } from "vite";
+import { svelteTesting } from "@testing-library/svelte/vite";
+import { defineConfig } from "vitest/config";
 
 // import { visualizer } from "rollup-plugin-visualizer";
 // import viteCompression from "vite-plugin-compression";
@@ -18,19 +19,13 @@ export default defineConfig({
   plugins: [
     sveltekit(),
     enhancedImages(),
+    svelteTesting(),
     // viteCompression({ algorithm: "brotliCompress" }),
     // visualizer({
     //   emitFile: true,
     //   filename: "stats.html",
     // }),
   ],
-
-  define: {
-    __NAME__: `"${pkg.name}"`,
-    __VERSION__: `"${pkg.version}"`,
-    __SVELTE_VERSION__: `"${sveltePackage.version}"`,
-    __SVELTEKIT_VERSION__: `"${svelteKitPackage.version}"`,
-  },
 
   // server: {
   //   https: {
@@ -41,4 +36,16 @@ export default defineConfig({
   //   },
   //   proxy: {},
   // },
+  define: {
+    __NAME__: `"${pkg.name}"`,
+    __VERSION__: `"${pkg.version}"`,
+    __SVELTE_VERSION__: `"${sveltePackage.version}"`,
+    __SVELTEKIT_VERSION__: `"${svelteKitPackage.version}"`,
+  },
+
+  test: {
+    environment: "jsdom",
+    setupFiles: ["./vitest-setup.ts"],
+    include: ["src/**/*.{test,spec}.{js,ts}"],
+  },
 });
