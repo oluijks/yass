@@ -1,7 +1,7 @@
 # Stage 1: Build and Test
 FROM node:22-alpine AS build
 
-# Install sqlite3, git, and npm
+# Install sqlite3, git, and pnpm
 RUN apk add --no-cache sqlite git && npm install -g pnpm@9.15.1 && npm install -g npm@11.0.0
 
 # Set the working directory inside the container

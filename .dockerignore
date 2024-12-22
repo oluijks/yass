@@ -9,3 +9,4 @@ drizzle.config.ts
 .svelte-kit
 .vscode
 node_modules
+*.log

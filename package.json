@@ -40,7 +40,7 @@
     "@sveltejs/adapter-auto": "^3.3.1",
     "@sveltejs/adapter-node": "^5.2.11",
     "@sveltejs/enhanced-img": "^0.4.4",
-    "@sveltejs/kit": "^2.13.0",
+    "@sveltejs/kit": "^2.14.0",
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@testing-library/jest-dom": "^6.6.3",

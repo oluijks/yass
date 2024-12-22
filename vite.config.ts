@@ -30,7 +30,11 @@ export default defineConfig({
     // }),
   ],
 
-  // server: {
+  server: {
+    watch: {
+      usePolling: true,
+    },
+    host: true,
   //   https: {
   //     key: fs.readFileSync(path.join(__dirname, "/cert/luba.dev/private.key.pem")),
   //     cert: fs.readFileSync(path.join(__dirname, "/cert/luba.dev/domain.cert.pem")),
@@ -38,7 +42,7 @@ export default defineConfig({
   //     cert: fs.readFileSync(path.join(__dirname, "/cert/localhost/cert.pem")),
   //   },
   //   proxy: {},
-  // },
+  },
 
   define: {
     "__NAME__": `"${pkg.name}"`,
