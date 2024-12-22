@@ -16,6 +16,8 @@
     "db:generate": "drizzle-kit generate",
     "db:studio": "drizzle-kit studio",
     "sys:info": "npx envinfo --system --binaries --browsers --npmPackages \"{svelte,@sveltejs/*,vite}\"",
+    "test": "npm run test:unit -- --run",
+    "test:ui": "vitest --ui",
     "test:unit": "vitest",
     "test": "npm run test:unit -- --run"
   },
@@ -38,6 +40,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/svelte": "^5.2.6",
     "@types/better-sqlite3": "^7.6.12",
+    "@vitest/coverage-v8": "2.1.6",
     "@vitest/ui": "^2.1.6",
     "autoprefixer": "^10.4.20",
     "bits-ui": "1.0.0-next.72",
