@@ -1,4 +1,5 @@
 /* eslint-disable antfu/no-import-node-modules-by-path */
+/* eslint-disable node/prefer-global/process */
 
 // import fs from "node:fs";
 // import path from "node:path";
@@ -6,10 +7,9 @@
 import { enhancedImages } from "@sveltejs/enhanced-img";
 import { sveltekit } from "@sveltejs/kit/vite";
 import { svelteTesting } from "@testing-library/svelte/vite";
-import { defineConfig } from "vitest/config";
-
 // import { visualizer } from "rollup-plugin-visualizer";
-// import viteCompression from "vite-plugin-compression";
+import viteCompression from "vite-plugin-compression";
+import { defineConfig } from "vitest/config";
 
 import svelteKitPackage from "./node_modules/@sveltejs/kit/package.json" with { type: "json" };
 import sveltePackage from "./node_modules/svelte/package.json" with { type: "json" };
@@ -20,7 +20,10 @@ export default defineConfig({
     sveltekit(),
     enhancedImages(),
     svelteTesting(),
-    // viteCompression({ algorithm: "brotliCompress" }),
+    viteCompression({
+      disable: true,
+      algorithm: "brotliCompress",
+    }),
     // visualizer({
     //   emitFile: true,
     //   filename: "stats.html",
@@ -36,16 +39,28 @@ export default defineConfig({
   //   },
   //   proxy: {},
   // },
+
   define: {
-    __NAME__: `"${pkg.name}"`,
-    __VERSION__: `"${pkg.version}"`,
-    __SVELTE_VERSION__: `"${sveltePackage.version}"`,
-    __SVELTEKIT_VERSION__: `"${svelteKitPackage.version}"`,
+    "__NAME__": `"${pkg.name}"`,
+    "__VERSION__": `"${pkg.version}"`,
+    "__SVELTE_VERSION__": `"${sveltePackage.version}"`,
+    "__SVELTEKIT_VERSION__": `"${svelteKitPackage.version}"`,
+    "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV || "development"),
   },
 
   test: {
+    coverage: {
+      enabled: false,
+      provider: "v8",
+      exclude: [
+        ".svelte-kit/**",
+        "src/__tests__/**",
+        "src/lib/components/shadcn/**",
+      ],
+    },
+    globals: true,
     environment: "jsdom",
-    setupFiles: ["./vitest-setup.ts"],
+    setupFiles: ["./vitest.setup.ts"],
     include: ["src/**/*.{test,spec}.{js,ts}"],
   },
 });
