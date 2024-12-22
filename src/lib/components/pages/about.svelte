@@ -1,5 +1,9 @@
 <div class="lg:max-w-6xl lg:container">
-  <h1 class="scroll-m-20 text-3xl lg:text-4xl my-12">About Us</h1>
+  <h1
+    class="scroll-m-20 text-3xl lg:text-4xl my-12"
+    data-testid="about-page-heading">
+    About Us
+  </h1>
 
   <p class="text-muted-foreground text-xl">
     Welcome to our website!

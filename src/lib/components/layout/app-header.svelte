@@ -53,7 +53,7 @@
                 aria-label="Login or Register"
                 class={buttonVariants({ variant: "ghost", size: "icon" })}
               >
-                <SignIn weight="bold" class="!h-[1.2rem] !w-[1.2rem]" />
+                <SignIn weight="bold" class="!size-[1.2rem]" />
               </DropdownMenu.Trigger>
               <DropdownMenu.Content align="end">
                 <DropdownMenu.Item onclick={() => goto("/login")}>Login</DropdownMenu.Item>
