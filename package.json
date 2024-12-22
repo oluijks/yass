@@ -19,7 +19,12 @@
     "test": "npm run test:unit -- --run",
     "test:ui": "vitest --ui",
     "test:unit": "vitest",
-    "test": "npm run test:unit -- --run"
+    "test:coverage": "vitest run --coverage",
+    "docker:build": "docker build -t yass .",
+    "docker:run": "docker run --env-file .env -e ORIGIN=http://localhost:3000 -p 3000:3000 --name yass yass",
+    "docker:stop": "docker stop yass",
+    "docker:remove": "docker rm yass",
+    "docker:update": "pnpm run docker:stop && pnpm run docker:remove && pnpm run docker:build && pnpm run docker:run"
   },
   "dependencies": {
     "@node-rs/argon2": "^2.0.2",
@@ -33,6 +38,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^3.12.0",
     "@sveltejs/adapter-auto": "^3.3.1",
+    "@sveltejs/adapter-node": "^5.2.11",
     "@sveltejs/enhanced-img": "^0.4.4",
     "@sveltejs/kit": "^2.13.0",
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
