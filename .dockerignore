@@ -1,0 +1,11 @@
+Dockerfile*
+.dockerignore
+.gitignore
+README.md
+LICENSE
+.npmrc
+eslint.config.js
+drizzle.config.ts
+.svelte-kit
+.vscode
+node_modules

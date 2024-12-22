@@ -20,6 +20,10 @@ Please use this repository as a learning resource, and exercise caution if you d
   ```bash
   pnpm install
   ```
+- Create .env and set `DATABASE_URL`
+  ```bash
+  cp .env.example .env
+  ```
 - Migrate database
   ```bash
   pnpm db:migrate
@@ -46,6 +50,16 @@ Restart dev server.
 ### Site configuration
 
 Change the dummy values in `src/lib/config/site.ts` with your own information. You can add more items if you need to.
+
+### Docker
+
+I've included a simple `Dockerfile` and some scripts in the `package.json` to run the tests and a production build in Docker.
+
+```bash
+pnpm run docker:build
+pnpm run docker:run
+pnpm run docker:update
+```
 
 ### Building
 
