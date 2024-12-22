@@ -77,7 +77,16 @@ You can deploy the site to various platforms, such as Render, Fly.io, Vercel, Ne
 
 If you want to make use of a SQLite database, you may need to set up a persistent storage solution or use a different database provider like Turso. Be sure to check out their and Drizzle documentation for more information on how to set up and configure the database.
 
----
+#### Fly.io
+
+Install the Fly CLI, login and deploy the site to Fly.io.
+
+```bash
+curl -L https://fly.io/install.sh | sh
+flyctl auth login
+flyctl deploy
+```
+
 
 ## What's included?
 
