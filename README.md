@@ -87,7 +87,6 @@ flyctl auth login
 flyctl deploy
 ```
 
-
 ## What's included?
 
 ### Packages
