@@ -1,6 +1,22 @@
-# Yass
+# Yass (Yet Another SvelteKit Starter)
 
-> Yet another sveltekit starter.
+[![License](https://img.shields.io/github/license/oluijks/yass)](https://github.com/oluijks/yass/blob/main/LICENSE)
+[![Made with SvelteKit](https://img.shields.io/badge/made%20with-SvelteKit-FF3E00.svg)](https://kit.svelte.dev)
+
+A modern, feature-rich SvelteKit starter template with authentication, database integration, UI components and deployment configurations ready to go.
+
+## ✨ Features
+
+- 🔐 Authentication using Auth
+- 💾 SQLite database with Drizzle ORM
+- 🎨 Styled with Tailwind CSS & shadcn/ui
+- 📱 Fully responsive design
+- 🚀 Production-ready deployment configs
+
+## 📋 Requirements
+
+- Node.js 18+
+- pnpm 8+
 
 Feel free to fork the repo, open issues, or submit pull requests to help improve it. Whether it's adding new features, optimizing performance, or fixing bugs, any contributions are welcome.
 
@@ -79,7 +95,7 @@ If you want to make use of a SQLite database, you may need to set up a persisten
 
 #### Fly.io
 
-Install the Fly CLI, login and deploy the site to Fly.io.
+Install the [Fly CLI](https://fly.io/docs/flyctl/install/), login and deploy the site to Fly.io.
 
 ```bash
 curl -L https://fly.io/install.sh | sh
