@@ -2,7 +2,7 @@
 export const siteConfig = {
   name: "Yass",
   description: "Yet another sveltekit starter",
-  url: "http://localhost:5173",
+  url: "https://yass.luba.dev",
   repo: "https://github.com/oluijks/yass",
   meta: {
     title: "Yass",
@@ -13,7 +13,7 @@ export const siteConfig = {
     social: {
       github: "https://github.com/oluijks",
       twitter: "https://x.com",
-      facebook: "https://www.facebook.com",
+      facebook: "https://www.facebook.com/profile.php?id=100082175559972",
     },
   },
 } as const;
