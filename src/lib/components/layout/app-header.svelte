@@ -3,7 +3,10 @@
   import { enhance } from "$app/forms";
   import { goto } from "$app/navigation";
   import { page } from "$app/state";
-  import { Button, buttonVariants } from "$lib/components/shadcn/button/index.js";
+  import {
+    Button,
+    buttonVariants,
+  } from "$lib/components/shadcn/button/index.js";
   import * as DropdownMenu from "$lib/components/shadcn/dropdown-menu/index.js";
   import { Separator } from "$lib/components/shadcn/separator/index.js";
   import { siteConfig } from "$lib/config/site.js";
@@ -22,26 +25,37 @@
     return direction;
   };
   const scrollDirection = $derived(derivedDirection(currentY));
-  const offScreen = $derived(scrollDirection === "down" && currentY > clientHeight * 4);
+  const offScreen = $derived(
+    scrollDirection === "down" && currentY > clientHeight * 4,
+  );
 </script>
 
 <svelte:window bind:scrollY={currentY} />
 
-<header class:motion-safe:-translate-y-full={offScreen} class="sticky-header" bind:clientHeight>
+<header
+  class:motion-safe:-translate-y-full={offScreen}
+  class="sticky-header"
+  bind:clientHeight
+>
   <div class="flex h-16 items-center">
     <div class="flex">
       <nav class="flex items-center">
         <NavButton text="Home" href="/" pathname={page.url.pathname} />
         <NavButton text="About" href="/about" pathname={page.url.pathname} />
         {#if page.data.user}
-          <NavButton text="Settings" href="/settings" pathname={page.url.pathname} />
+          <NavButton
+            text="Settings"
+            href="/settings"
+            pathname={page.url.pathname}
+          />
         {/if}
       </nav>
     </div>
     <div class="ml-auto pr-2 flex items-center gap-2">
       {#if page.data.user}
         <form method="post" action="?/logout" use:enhance>
-          <Button type="submit" variant="link" class="royal-link">Logout</Button>
+          <Button type="submit" variant="link" class="royal-link">Logout</Button
+          >
         </form>
       {:else}
         <div class="flex items-center">
@@ -56,15 +70,27 @@
                 <SignIn weight="bold" class="!size-[1.2rem]" />
               </DropdownMenu.Trigger>
               <DropdownMenu.Content align="end">
-                <DropdownMenu.Item onclick={() => goto("/login")}>Login</DropdownMenu.Item>
-                <DropdownMenu.Item onclick={() => goto("/register")}>Register</DropdownMenu.Item>
+                <DropdownMenu.Item onclick={() => goto("/login")}
+                >Login</DropdownMenu.Item
+                >
+                <DropdownMenu.Item onclick={() => goto("/register")}
+                >Register</DropdownMenu.Item
+                >
               </DropdownMenu.Content>
             </DropdownMenu.Root>
           </div>
           <div class="hidden md:flex items-center">
-            <NavButton text="Login" href="/login" pathname={page.url.pathname} />
+            <NavButton
+              text="Login"
+              href="/login"
+              pathname={page.url.pathname}
+            />
             <Separator orientation="vertical" class="h-6 flex" />
-            <NavButton text="Register" href="/register" pathname={page.url.pathname} />
+            <NavButton
+              text="Register"
+              href="/register"
+              pathname={page.url.pathname}
+            />
           </div>
         </div>
       {/if}

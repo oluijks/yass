@@ -20,7 +20,10 @@ const config = {
     }),
 
     version: {
-      name: child_process.execSync("git rev-parse --short HEAD").toString().trim(),
+      name: child_process
+        .execSync("git rev-parse --short HEAD")
+        .toString()
+        .trim(),
       // pollInterval: 3000,
     },
   },

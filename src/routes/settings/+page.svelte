@@ -15,9 +15,7 @@
 <div class="lg:max-w-6xl lg:container">
   <h1 class="scroll-m-20 text-3xl lg:text-4xl my-12">Site Settings</h1>
 
-  <p class="text-muted-foreground text-xl mb-8">
-    Manage your site settings
-  </p>
+  <p class="text-muted-foreground text-xl mb-8">Manage your site settings</p>
 
   <h2 class="text-xl ml-1 mb-2 font-medium">General</h2>
 

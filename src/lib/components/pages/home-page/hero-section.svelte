@@ -52,17 +52,24 @@
 </section> -->
 
 <section class="full-bleed lg:bg-card">
-  <div class="max-w-6xl container mx-auto px-0 md:px-3 py-6 lg:py-16 grid lg:grid-cols-2 gap-6 lg:gap-0">
+  <div
+    class="max-w-6xl container mx-auto px-0 md:px-3 py-6 lg:py-16 grid lg:grid-cols-2 gap-6 lg:gap-0"
+  >
     <div class="flex flex-col justify-evenly gap-6 lg:gap-0">
       <div class="space-y-4">
         <h1 class="text-center lg:text-left text-4xl lg:text-5xl">
           {siteConfig.description}
         </h1>
-        <p class="text-center lg:text-left leading-7 text-muted-foreground text-xl">
-          Kickstart your SvelteKit project effortlessly with {siteConfig.name} — the starter kit for <i>speed</i> and ease.
+        <p
+          class="text-center lg:text-left leading-7 text-muted-foreground text-xl"
+        >
+          Kickstart your SvelteKit project effortlessly with {siteConfig.name} —
+          the starter kit for <i>speed</i> and ease.
         </p>
       </div>
-      <div class="flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-2">
+      <div
+        class="flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-2"
+      >
         <Button
           class="flex items-center justify-center w-52"
           href={siteConfig.repo}

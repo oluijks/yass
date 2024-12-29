@@ -13,7 +13,9 @@
 </script>
 
 {#if dev}
-  <div class="fixed bottom-0 right-0 z-50 m-3 flex items-center justify-center font-mono">
+  <div
+    class="fixed bottom-0 right-0 z-50 m-3 flex items-center justify-center font-mono"
+  >
     {#each indicators as item}
       <Badge variant="secondary" class={item.class}>{item.indicator}</Badge>
     {/each}

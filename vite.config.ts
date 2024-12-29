@@ -35,13 +35,13 @@ export default defineConfig({
       usePolling: true,
     },
     host: true,
-  //   https: {
-  //     key: fs.readFileSync(path.join(__dirname, "/cert/luba.dev/private.key.pem")),
-  //     cert: fs.readFileSync(path.join(__dirname, "/cert/luba.dev/domain.cert.pem")),
-  //     key: fs.readFileSync(path.join(__dirname, "/cert/localhost/key.pem")),
-  //     cert: fs.readFileSync(path.join(__dirname, "/cert/localhost/cert.pem")),
-  //   },
-  //   proxy: {},
+    //   https: {
+    //     key: fs.readFileSync(path.join(__dirname, "/cert/luba.dev/private.key.pem")),
+    //     cert: fs.readFileSync(path.join(__dirname, "/cert/luba.dev/domain.cert.pem")),
+    //     key: fs.readFileSync(path.join(__dirname, "/cert/localhost/key.pem")),
+    //     cert: fs.readFileSync(path.join(__dirname, "/cert/localhost/cert.pem")),
+    //   },
+    //   proxy: {},
   },
 
   define: {
@@ -49,7 +49,9 @@ export default defineConfig({
     "__VERSION__": `"${pkg.version}"`,
     "__SVELTE_VERSION__": `"${sveltePackage.version}"`,
     "__SVELTEKIT_VERSION__": `"${svelteKitPackage.version}"`,
-    "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV || "development"),
+    "process.env.NODE_ENV": JSON.stringify(
+      process.env.NODE_ENV || "development",
+    ),
   },
 
   test: {

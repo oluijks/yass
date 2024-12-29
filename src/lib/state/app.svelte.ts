@@ -9,12 +9,17 @@ export class AppState {
     // Multiple `$effect()` to get and save items to local storage
     // Thanks to Joy of Code (https://www.youtube.com/watch?v=uOI77E8Y95Q)
     $effect(() => {
-      const savedAnimationsEnabled = window.localStorage.getItem("animations-enabled");
-      savedAnimationsEnabled && (this.#animationsEnabled = JSON.parse(savedAnimationsEnabled));
+      const savedAnimationsEnabled
+        = window.localStorage.getItem("animations-enabled");
+      savedAnimationsEnabled
+      && (this.#animationsEnabled = JSON.parse(savedAnimationsEnabled));
     });
 
     $effect(() => {
-      window.localStorage.setItem("animations-enabled", JSON.stringify(this.#animationsEnabled));
+      window.localStorage.setItem(
+        "animations-enabled",
+        JSON.stringify(this.#animationsEnabled),
+      );
     });
   }
 

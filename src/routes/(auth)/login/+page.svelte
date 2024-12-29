@@ -8,7 +8,10 @@
   const animated = $derived(appState.animationsEnabled);
 </script>
 
-<div class:border-glow={animated} class="w-full md:max-w-md mx-auto mt-6 lg:mt-24">
+<div
+  class:border-glow={animated}
+  class="w-full md:max-w-md mx-auto mt-6 lg:mt-24"
+>
   <Card.Root class="border-0">
     <Card.Header class="flex items-center gap-2">
       <Card.Title level={1} class="text-2xl">Login</Card.Title>
@@ -20,7 +23,10 @@
       <LoginForm data={data.form} />
     </Card.Content>
     <Card.Footer class="justify-end gap-1">
-      <a href="/register" class="royal-link hover:underline hover:underline-offset-4">
+      <a
+        href="/register"
+        class="royal-link hover:underline hover:underline-offset-4"
+      >
         Register here
       </a>
     </Card.Footer>

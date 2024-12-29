@@ -50,7 +50,8 @@ export async function validateSessionToken(token: string) {
     return { session: null, user: null };
   }
 
-  const renewSession = Date.now() >= session.expiresAt.getTime() - DAY_IN_MS * 15;
+  const renewSession
+    = Date.now() >= session.expiresAt.getTime() - DAY_IN_MS * 15;
   if (renewSession) {
     session.expiresAt = new Date(Date.now() + DAY_IN_MS * 30);
     await db
@@ -62,13 +63,19 @@ export async function validateSessionToken(token: string) {
   return { session, user };
 }
 
-export type SessionValidationResult = Awaited<ReturnType<typeof validateSessionToken>>;
+export type SessionValidationResult = Awaited<
+  ReturnType<typeof validateSessionToken>
+>;
 
 export async function invalidateSession(sessionId: string) {
   await db.delete(table.session).where(eq(table.session.id, sessionId));
 }
 
-export function setSessionTokenCookie(event: RequestEvent, token: string, expiresAt: Date) {
+export function setSessionTokenCookie(
+  event: RequestEvent,
+  token: string,
+  expiresAt: Date,
+) {
   event.cookies.set(sessionCookieName, token, {
     expires: expiresAt,
     secure: !dev,
