@@ -21,7 +21,10 @@
   // See usage: https://caniuse.com/?search=startViewTransition
   // Example: https://rgbstudios.org/blog/page-transitions-in-svelte-kit
   onNavigate((navigation) => {
-    if (document.startViewTransition && navigation.from?.route.id !== navigation.to?.route.id) {
+    if (
+      document.startViewTransition
+      && navigation.from?.route.id !== navigation.to?.route.id
+    ) {
       return new Promise((resolve) => {
         document.startViewTransition(async () => {
           resolve();
@@ -56,12 +59,20 @@
   }
 
   @keyframes fade-in {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   @keyframes fade-out {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 
   /* Adjust duration and type of animation to your liking */

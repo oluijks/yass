@@ -26,7 +26,7 @@ This project is not ready for production use. It is primarily created for educat
 
 Please use this repository as a learning resource, and exercise caution if you decide to use or modify the code for any production environments.
 
-## Getting started
+## 🚀 Getting started
 
 - Clone repo
   ```bash
@@ -49,7 +49,7 @@ Please use this repository as a learning resource, and exercise caution if you d
   pnpm run dev --host 0.0.0.0
   ```
 
-### HTTPS on localhost
+### 🔒 HTTPS on localhost
 
 See [https://github.com/FiloSottile/mkcert](https://github.com/FiloSottile/mkcert)
 
@@ -63,11 +63,11 @@ mkcert -key-file key.pem -cert-file cert.pem localhost
 
 Restart dev server.
 
-### Site configuration
+### ⚙️ Site configuration
 
 Change the dummy values in `src/lib/config/site.ts` with your own information. You can add more items if you need to.
 
-### Docker
+### 🐳 Docker
 
 I've included a simple `Dockerfile` and some scripts in the `package.json` to run the tests and a production build in Docker.
 
@@ -77,7 +77,7 @@ pnpm run docker:run
 pnpm run docker:update
 ```
 
-### Building
+### 🏗️ Building
 
 ```bash
 pnpm run build
@@ -87,7 +87,7 @@ By enabling the Rollup Visualizer plugin in `vite.config.ts`, you can analyze yo
 
 Alternatively, you can enable the Vite Compression plugin in `vite.config.ts` to generate compressed build files using the gzip or Brotli algorithm.
 
-### Deploying
+### 🌎 Deploying
 
 You can deploy the site to various platforms, such as Render, Fly.io, Vercel, Netlify, or Cloudflare Pages. Make sure to configure the environment variables and settings accordingly and use the correct SvelteKit Adapter.
 
@@ -103,9 +103,9 @@ flyctl auth login
 flyctl deploy
 ```
 
-## What's included?
+## ➕ What's included?
 
-### Packages
+### 📦 Packages
 
 - Auth (former Lucia)
 - Drizzle ORM/Kit with SQLite
@@ -115,7 +115,7 @@ flyctl deploy
 - Rollup Plugin Visualizer (rollup-plugin-visualizer)
 - Vite Compression (gzip/brotli) (vite-plugin-compression)
 
-### Routes
+### 🛣️ Routes
 
 The pages are responsive and include a basic header with links for Home, About, Login, and Register, along with a dark/light mode switcher. The footer displays the site name, version, and details of the last commit.
 
@@ -130,13 +130,13 @@ The home page comes with a hero and features section.
 - /legal/policy
 - /legal/cookies
 
-### Misc
+### 🎨 Misc
 
 - SEO (global and per page)
 - Local fonts (preloaded in prod)
 - Subtle animations (configurable)
 
-## Thanks to
+## 💝 Thanks to
 
 These amazing individuals inspired me and taught me so much about Svelte and CSS:
 

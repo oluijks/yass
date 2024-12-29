@@ -11,37 +11,48 @@
     <li class="mb-3">
       <strong>Purpose</strong>
       <p>
-        This website is for demonstration purposes only and does not represent a fully functional product or service. The features, content, and services available on this website are subject to change.
+        This website is for demonstration purposes only and does not represent a
+        fully functional product or service. The features, content, and services
+        available on this website are subject to change.
       </p>
     </li>
     <li class="mb-3">
       <strong>Usage</strong>
       <p>
-        You may use this website for personal, non-commercial purposes. Any attempt to alter, copy, or distribute the website content without permission is prohibited.
+        You may use this website for personal, non-commercial purposes. Any
+        attempt to alter, copy, or distribute the website content without
+        permission is prohibited.
       </p>
     </li>
     <li class="mb-3">
       <strong>No Warranty</strong>
       <p>
-        The website is provided "as is," and we make no warranties, express or implied, regarding the accuracy, completeness, or availability of the website. We are not responsible for any issues that may arise from using this page.
+        The website is provided "as is," and we make no warranties, express or
+        implied, regarding the accuracy, completeness, or availability of the
+        website. We are not responsible for any issues that may arise from using
+        this page.
       </p>
     </li>
     <li class="mb-3">
       <strong>Privacy</strong>
       <p>
-        Any data entered during the use of this website may be stored or used in accordance with our privacy policy. However, please note that this website does not reflect the privacy practices of the final product.
+        Any data entered during the use of this website may be stored or used in
+        accordance with our privacy policy. However, please note that this
+        website does not reflect the privacy practices of the final product.
       </p>
     </li>
     <li class="mb-3">
       <strong>Limitation of Liability</strong>
       <p>
-        We are not liable for any direct, indirect, incidental, or consequential damages that may occur as a result of using this website.
+        We are not liable for any direct, indirect, incidental, or consequential
+        damages that may occur as a result of using this website.
       </p>
     </li>
     <li class="mb-3">
       <strong>Changes to Terms</strong>
       <p>
-        We reserve the right to modify these terms at any time. Continued use of the website implies acceptance of any changes made.
+        We reserve the right to modify these terms at any time. Continued use of
+        the website implies acceptance of any changes made.
       </p>
     </li>
   </ol>

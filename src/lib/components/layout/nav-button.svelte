@@ -9,12 +9,7 @@
     className?: string | null | undefined;
   };
 
-  const {
-    text,
-    href,
-    pathname,
-    className,
-  }: Props = $props();
+  const { text, href, pathname, className }: Props = $props();
 </script>
 
 <!--
@@ -39,7 +34,8 @@ A component that will render a link button
       pathname === href
         ? "text-foreground underline-offset-4 underline"
         : "text-foreground/70",
-    )}>
+    )}
+  >
     {text}
   </Button>
 {/snippet}
