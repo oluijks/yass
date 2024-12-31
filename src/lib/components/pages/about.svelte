@@ -1,9 +1,13 @@
+<script lang="ts">
+  import { siteConfig } from "$lib/config/site.js";
+</script>
+
 <div class="lg:max-w-6xl lg:container">
   <h1
     class="scroll-m-20 text-3xl lg:text-4xl my-12"
     data-testid="about-page-heading"
   >
-    About Us
+    About {siteConfig.name}
   </h1>
 
   <p class="text-muted-foreground text-xl">Welcome to our website!</p>
