@@ -1,5 +1,6 @@
 import About from "$lib/components/pages/about.svelte";
 
+import { siteConfig } from "$lib/config/site.js";
 import { render, screen } from "@testing-library/svelte";
 import { beforeEach, describe, expect, it } from "vitest";
 
@@ -13,8 +14,8 @@ describe("<About />", () => {
     expect(pageHeading).toBeInTheDocument();
   });
 
-  it("should have an H1 with text content 'About Us'", () => {
+  it(`should have an H1 with text content '${siteConfig.name}'`, () => {
     const pageHeading = screen.getByTestId("about-page-heading");
-    expect(pageHeading).toHaveTextContent("About Us");
+    expect(pageHeading).toHaveTextContent(`About ${siteConfig.name}`);
   });
 });
