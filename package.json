@@ -32,7 +32,7 @@
     "@oslojs/encoding": "^1.1.0",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/typography": "^0.5.15",
-    "better-sqlite3": "^11.7.0",
+    "better-sqlite3": "^11.7.2",
     "drizzle-orm": "^0.38.3"
   },
   "devDependencies": {
@@ -63,7 +63,7 @@
     "mode-watcher": "^0.5.0",
     "phosphor-svelte": "^3.0.1",
     "rollup-plugin-visualizer": "^5.13.1",
-    "svelte": "^5.16.0",
+    "svelte": "^5.16.3",
     "svelte-check": "^4.1.1",
     "svelte-eslint-parser": "^0.43.0",
     "svelte-sonner": "^0.3.28",

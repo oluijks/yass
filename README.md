@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/github/license/oluijks/yass)](https://github.com/oluijks/yass/blob/main/LICENSE)
 [![Made with SvelteKit](https://img.shields.io/badge/made%20with-SvelteKit-FF3E00.svg)](https://kit.svelte.dev)
 
-A modern, feature-rich SvelteKit starter template with authentication, database integration, UI components and deployment configurations ready to go.
+A modern, feature-rich SvelteKit starter template with authentication, database integration, UI components and deployment configurations ready to go. You can view a live demo of the site at [https://yass.luba.dev](https://yass.luba.dev).
 
 ## ✨ Features
 
