@@ -1,7 +1,8 @@
 # Yass (Yet Another SvelteKit Starter)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/oluijks/yass/blob/main/LICENSE)
-[![Made with SvelteKit](https://img.shields.io/badge/made%20with-SvelteKit-FF3E00.svg)](https://kit.svelte.dev)
+[![GitHub Release](https://img.shields.io/github/v/release/oluijks/yass?style=for-the-badge)](https://github.com/oluijks/yass/tree/v1.0.0)
+[![Static Badge](https://img.shields.io/badge/SvelteKit%20-%20%23f96743?style=for-the-badge&label=Made%20with)](https://svelte.dev)
+[![GitHub License](https://img.shields.io/github/license/oluijks/yass?style=for-the-badge)](https://github.com/oluijks/yass/blob/main/LICENSE)
 
 A modern, feature-rich SvelteKit starter template with authentication, database integration, UI components and deployment configurations ready to go. You can view a live demo of the site at [https://yass.luba.dev](https://yass.luba.dev).
 
