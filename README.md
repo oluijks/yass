@@ -47,13 +47,12 @@ Please use this repository as a learning resource, and exercise caution if you d
   ```
 - Start dev server
   ```bash
-  pnpm run dev --host 0.0.0.0
+  pnpm run dev
   ```
 
 ### 🔒 HTTPS on localhost
 
 See [https://github.com/FiloSottile/mkcert](https://github.com/FiloSottile/mkcert)
-
 Uncomment the server.https block in `vite.config.ts` and generate `key.pem` and `cert.pem` by running:
 
 ```bash
