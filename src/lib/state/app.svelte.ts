@@ -6,8 +6,9 @@ export class AppState {
   // Add more properties here
 
   constructor() {
-    // Multiple `$effect()` to get and save items to local storage
-    // Thanks to Joy of Code (https://www.youtube.com/watch?v=uOI77E8Y95Q)
+    // Multiple `$effect()` to get and save
+    // items to local storage, thanks to Joy of Code
+    // @see https://www.youtube.com/watch?v=uOI77E8Y95Q
     $effect(() => {
       const savedAnimationsEnabled
         = window.localStorage.getItem("animations-enabled");
@@ -37,7 +38,8 @@ export class AppState {
 }
 
 // Wrapper functions for set and get context
-// Thanks to Huntabyte (https://www.youtube.com/watch?v=e1vlC31Sh34)
+// Thanks to Huntabyte
+// @see https://www.youtube.com/watch?v=e1vlC31Sh34
 export function setAppState() {
   return setContext(APP_STATE_KEY, new AppState());
 }
