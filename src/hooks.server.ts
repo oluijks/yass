@@ -1,5 +1,11 @@
-import type { Handle } from "@sveltejs/kit";
+import type { Handle, ServerInit } from "@sveltejs/kit";
 import * as auth from "$lib/server/auth.js";
+
+// @see https://svelte.dev/docs/kit/hooks#Shared-hooks-init
+export const init: ServerInit = async () => {
+  // eslint-disable-next-line no-console
+  console.log("[app] started...");
+};
 
 const handleAuth: Handle = async ({ event, resolve }) => {
   const sessionToken = event.cookies.get(auth.sessionCookieName);

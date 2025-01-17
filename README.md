@@ -16,14 +16,14 @@ A modern, feature-rich SvelteKit starter template with authentication, database 
 
 ## 📋 Requirements
 
-- Node.js 18+
-- pnpm 8+
+- Node 18.13+
+- Docker (optional)
 
 Feel free to fork the repo, open issues, or submit pull requests to help improve it. Whether it's adding new features, optimizing performance, or fixing bugs, any contributions are welcome.
 
 ## Disclaimer
 
-This project is not ready for production use. It is primarily created for educational purposes and to demonstrate certain concepts or techniques. While the code may work as expected in a controlled environment, it may not be stable, secure, or optimized for real-world applications.
+This project is not ready for production use as is. It is primarily created for educational purposes and to demonstrate certain concepts or techniques. While the code may work as expected in a controlled environment, it may not be stable, secure, or optimized for real-world applications. Use at your own risk.
 
 Please use this repository as a learning resource, and exercise caution if you decide to use or modify the code for any production environments.
 
@@ -48,6 +48,11 @@ Please use this repository as a learning resource, and exercise caution if you d
 - Start dev server
   ```bash
   pnpm run dev
+  ```
+- Linting & Testing
+  ```bash
+  pnpm run lint/lint:fix
+  pnpm run test/test:unit/test:ui
   ```
 
 ### 🔒 HTTPS on localhost
