@@ -25,7 +25,8 @@
         class="flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-2"
       >
         <Button
-          class="flex items-center justify-center w-52"
+          size="lg"
+          class="flex items-center justify-center lg:w-52 text-base w-full"
           href={siteConfig.repo}
           target="_blank"
         >
@@ -33,8 +34,9 @@
           Clone source
         </Button>
         <Button
+          size="lg"
           variant="link"
-          class="royal-link"
+          class="royal-link text-base"
           href="{siteConfig.repo}/blob/main/README.md"
           target="_blank"
         >
