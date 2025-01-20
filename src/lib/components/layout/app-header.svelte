@@ -53,7 +53,7 @@
     </div>
     <div class="ml-auto pr-2 flex items-center gap-2">
       {#if page.data.user}
-        <form method="post" action="?/logout" use:enhance>
+        <form method="post" action="/?/logout" use:enhance>
           <Button type="submit" variant="link" class="royal-link">Logout</Button
           >
         </form>
