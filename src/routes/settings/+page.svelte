@@ -12,7 +12,7 @@
   });
 </script>
 
-<div class="lg:max-w-6xl lg:container">
+<div class="lg:max-w-6xl lg:container mx-auto">
   <h1 class="scroll-m-20 text-3xl lg:text-4xl my-12">Site Settings</h1>
 
   <p class="text-muted-foreground text-xl mb-8">Manage your site settings</p>

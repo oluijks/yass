@@ -248,6 +248,7 @@
   min-height: 100dvh;
 }
 
+/* This seems to be broken, will fix it later */
 /* Animated Borders, thanks to Coding2GO (https://www.youtube.com/watch?v=ezP4kbOvs_E) */
 .border-glow {
   position: relative;

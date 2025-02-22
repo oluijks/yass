@@ -10,7 +10,7 @@ A modern, feature-rich SvelteKit starter template with authentication, database 
 
 - 🔐 Authentication using Auth
 - 💾 SQLite database with Drizzle ORM
-- 🎨 Styled with Tailwind CSS & shadcn/ui
+- 🎨 Styled with Tailwind CSS v4 & shadcn/ui
 - 📱 Fully responsive design
 - 🚀 Production-ready deployment configs
 
@@ -115,8 +115,8 @@ flyctl deploy
 - Auth (former Lucia)
 - Drizzle ORM/Kit with SQLite
 - ESLint (@antfu/eslint-config)
-- Tailwind CSS & Svelte port of shadcn/ui
 - Enhanced Images (@sveltejs/enhanced-img)
+- Tailwind CSS v4 & Svelte port of shadcn/ui
 - Rollup Plugin Visualizer (rollup-plugin-visualizer)
 - Vite Compression (gzip/brotli) (vite-plugin-compression)
 
