@@ -1,81 +1,165 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "./tailwindcss-animate.css";
 
-/**
- * base layer is for things like reset rules or default styles applied to plain HTML elements
- * components layer is for class-based styles that you want to be able to override with utilities
- * utilities layer is for small, single-purpose classes that should always take precedence over any other styles
- */
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
-  :root {
-    --font-sans: "Inter", sans-serif;
-    --font-serif: "Lora Variable", serif;
-    --font-mono: "IBM Plex Mono", monospace;
-    --font-heading: "Outfit Variable", sans-serif;
-
-    --background: 221.89 5.2% 95.94%;
-    --foreground: 240 5.88% 10%;
-    --muted: 224.15 36% 86%;
-    --muted-foreground: 226.42 6% 31%;
-    --popover: 226.42 39% 99%;
-    --popover-foreground: 47 70% 0%;
-    --card: 224.15 39% 99%;
-    --card-foreground: 47 70% 0%;
-    --border: 0 0% 80%;
-    --input: 217.36 1.65% 78.88%;
-    --primary: 211 85% 40%;
-    --primary-foreground: 221.89 0% 100%;
-    --secondary: 224.15 2.11% 82.71%;
-    --secondary-foreground: 228.68 11% 32%;
-    --accent: 217.36 3.25% 88.07%;
-    --accent-foreground: 233.21 11% 32%;
-    --destructive: 355.47 81.67% 40.65%;
-    --destructive-foreground: 348.68 96% 89%;
-    --ring: 221.89 65% 48%;
-
-    --radius: 0.375rem;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
   }
+}
 
-  .dark {
-    --background: 212 18.25% 15.88%;
-    --foreground: 216 19.48% 75%;
-    --muted: 213.75 11.59% 27.06%;
-    --muted-foreground: 0 0% 63.9%;
-    --popover: 212 18.25% 15.88%;
-    --popover-foreground: 0 0% 98%;
-    --card: 217.5 17.39% 18.04%;
-    --card-foreground: 216 19.48% 88%;
-    --border: 213.75 11.59% 27.06%;
-    --input: 213.75 11.59% 27.06%;
-    --primary: 124.11 41.24% 34.71%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 213.75 11.59% 27.06%;
-    --secondary-foreground: 0 0% 98%;
-    --accent: 213.75 11.59% 27.06%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 3.12 74.76% 59.61%;
-    --destructive-foreground: 0 0% 98%;
-    --ring: 0 0% 83.1%;
+:root {
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Lora Variable", serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-heading: "Outfit Variable", sans-serif;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+  --background: 221.89 5.2% 95.94%;
+  --foreground: 240 5.88% 10%;
+  --muted: 224.15 36% 86%;
+  --muted-foreground: 226.42 6% 31%;
+  --popover: 226.42 39% 99%;
+  --popover-foreground: 47 70% 0%;
+  --card: 224.15 39% 99%;
+  --card-foreground: 47 70% 0%;
+  --border: 0 0% 80%;
+  --input: 217.36 1.65% 78.88%;
+  --primary: 211 85% 40%;
+  --primary-foreground: 221.89 0% 100%;
+  --secondary: 224.15 2.11% 82.71%;
+  --secondary-foreground: 228.68 11% 32%;
+  --accent: 217.36 3.25% 88.07%;
+  --accent-foreground: 233.21 11% 32%;
+  --destructive: 355.47 81.67% 40.65%;
+  --destructive-foreground: 348.68 96% 89%;
+  --ring: 221.89 65% 48%;
+
+  --radius: 0.375rem;
+
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+.dark {
+  --background: 212 18.25% 15.88%;
+  --foreground: 216 19.48% 75%;
+  --muted: 213.75 11.59% 27.06%;
+  --muted-foreground: 0 0% 63.9%;
+  --popover: 212 18.25% 15.88%;
+  --popover-foreground: 0 0% 98%;
+  --card: 217.5 17.39% 18.04%;
+  --card-foreground: 216 19.48% 88%;
+  --border: 213.75 11.59% 27.06%;
+  --input: 213.75 11.59% 27.06%;
+  --primary: 124.11 41.24% 34.71%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 213.75 11.59% 27.06%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 213.75 11.59% 27.06%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 3.12 74.76% 59.61%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 0 0% 83.1%;
+
+  --sidebar-background: 240 5.9% 10%;
+  --sidebar-foreground: 240 4.8% 95.9%;
+  --sidebar-primary: 224.3 76.3% 48%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 240 3.7% 15.9%;
+  --sidebar-accent-foreground: 240 4.8% 95.9%;
+  --sidebar-border: 240 3.7% 15.9%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+@theme {
+  /* Fonts */
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Lora Variable", serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-heading: "Outfit Variable", sans-serif;
+
+  /* Colors */
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-caution: var(--color-red-500);
+  --color-warning: var(--color-amber-500);
+  --color-info: var(--color-sky-500);
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  /* Border */
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* Animations */
+  --animate-accordion-down: 0.2s ease-out accordion-down;
+  --animate-accordion-up: 0.2s ease-out accordion-up;
+  --animate-caret-blink: 1.25s ease-out infinite caret-blink;
+
+  /* Keyframes */
+  @keyframes accordion-down {
+    from: {
+      height: 0;
+    }
+    to: {
+      height: var(--bits-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from: {
+      height: var(--bits-accordion-content-height);
+    }
+    to: {
+      height: 0;
+    }
+  }
+  @keyframes caret-blink {
+    0%,
+    70%,
+    100% {
+      opacity: 1;
+    }
+    20%,
+    50% {
+      opacity: 0;
+    }
   }
 }
 
@@ -92,8 +176,9 @@
     font-display: swap;
     font-weight: 100 900;
     src: url(../fonts/inter-latin-wght-normal.woff2) format("woff2-variations");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
-      U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    unicode-range:
+      U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F,
+      U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 
   @font-face {
@@ -102,8 +187,9 @@
     font-display: swap;
     font-weight: 100 900;
     src: url(../fonts/outfit-latin-wght-normal.woff2) format("woff2-variations");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
-      U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    unicode-range:
+      U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F,
+      U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 
   @font-face {
@@ -112,8 +198,9 @@
     font-display: swap;
     font-weight: 400;
     src: url(../fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
-      U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    unicode-range:
+      U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F,
+      U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 
   @font-face {
@@ -122,8 +209,9 @@
     font-display: swap;
     font-weight: 400 700;
     src: url(../fonts/lora-latin-wght-normal.woff2) format("woff2-variations");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
-      U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    unicode-range:
+      U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F,
+      U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 
   * {
@@ -149,15 +237,7 @@
   h4,
   h5,
   h6 {
-    @apply text-balance font-heading font-light tracking-wide;
-  }
-}
-
-/* Not sure if this is the right place for a class like this */
-/* I've seen people putting it in the utilities or no layer  */
-@layer components {
-  .royal-link {
-    @apply dark:text-royal-blue-200 text-royal-blue-600;
+    @apply text-balance font-light tracking-wide font-heading;
   }
 }
 

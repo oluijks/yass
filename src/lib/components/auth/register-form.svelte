@@ -1,17 +1,18 @@
 <script lang="ts">
+  import type { Infer, SuperValidated } from "sveltekit-superforms";
+  import type { RegisterFormSchema } from "./schema.js";
   import { dev } from "$app/environment";
   import * as Form from "$lib/components/shadcn/form";
   import { Input } from "$lib/components/shadcn/input";
   import { DEBUG_FORMS } from "$lib/utils.js";
   import { toast } from "svelte-sonner";
-  import {
-    type Infer,
+  import SuperDebug, {
+
     superForm,
-    type SuperValidated,
+
   } from "sveltekit-superforms";
-  import SuperDebug from "sveltekit-superforms";
   import { zodClient } from "sveltekit-superforms/adapters";
-  import { type RegisterFormSchema, registerFormSchema } from "./schema.js";
+  import { registerFormSchema } from "./schema.js";
 
   const {
     data,

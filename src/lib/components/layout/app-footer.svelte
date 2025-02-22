@@ -39,8 +39,9 @@
 </footer>
 
 <style lang="postcss">
+  @reference "../../../assets/styles/app.css";
   footer {
-    @apply mt-auto border-t border-border/40 bg-background p-2;
+    @apply mt-auto border-t bg-background p-2;
     view-transition-name: app-footer;
   }
   .footer-container {

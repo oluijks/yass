@@ -1,4 +1,4 @@
-<div class="lg:max-w-6xl lg:container">
+<div class="lg:max-w-6xl lg:container mx-auto">
   <h1 class="scroll-m-20 text-3xl lg:text-4xl my-12">Privacy Policy</h1>
 
   <p class="text-muted-foreground mb-6">Effective Date: 01/01/2025</p>
@@ -99,8 +99,9 @@
 </div>
 
 <style lang="postcss">
+  @reference "../../../../assets/styles/app.css";
   p {
-    @apply text-balance leading-7 [&:not(:first-child)]:mt-1;
+    @apply text-balance leading-7 not-first:mt-1;
   }
   ul {
     @apply pl-2 list-disc;

@@ -67,7 +67,7 @@
                 aria-label="Login or Register"
                 class={buttonVariants({ variant: "ghost", size: "icon" })}
               >
-                <SignIn weight="bold" class="!size-[1.2rem]" />
+                <SignIn weight="bold" class="size-[1.2rem]!" />
               </DropdownMenu.Trigger>
               <DropdownMenu.Content align="end">
                 <DropdownMenu.Item onclick={() => goto("/login")}
@@ -102,17 +102,18 @@
         aria-label="Visit Github Repository"
         target="_blank"
       >
-        <GithubLogo weight="duotone" class="!h-[1.2rem] !w-[1.2rem]" />
+        <GithubLogo weight="duotone" class="h-[1.2rem]! w-[1.2rem]!" />
       </Button>
     </div>
   </div>
 </header>
 
 <style lang="postcss">
+  @reference "../../../assets/styles/app.css";
   header {
     view-transition-name: app-header;
   }
   .sticky-header {
-    @apply sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 px-2 backdrop-blur supports-[backdrop-filter]:bg-background/60;
+    @apply sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 px-2 backdrop-blur supports-backdrop-filter:bg-background/60;
   }
 </style>

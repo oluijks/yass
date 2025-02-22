@@ -1,11 +1,12 @@
 <script lang="ts">
+  import type { IconComponentProps } from "phosphor-svelte";
   import type { Component } from "svelte";
   import * as Card from "$lib/components/shadcn/card/index.js";
   import {
     AirplaneTakeoff,
     Fingerprint,
     Gear,
-    type IconComponentProps,
+
     ShieldCheck,
   } from "phosphor-svelte";
 
@@ -53,12 +54,12 @@
     class="max-w-7xl mx-auto grid md:grid-cols-2 xl:grid-cols-4 gap-4 px-0 md:px-3 py-6 lg:py-16"
   >
     {#each features as feature}
-      <Card.Root class="rounded-md hover:border-royal-blue-500">
+      <Card.Root class="rounded-md hover:border-blue-500">
         <Card.Header class="flex items-center">
           <Card.Title level={2}>
-            <feature.icon weight="thin" size="92" class="text-royal-blue-500" />
+            <feature.icon weight="thin" size="92" class="text-blue-500" />
           </Card.Title>
-          <Card.Description class="text-2xl text-center pt-3 font-heading">
+          <Card.Description class="text-2xl text-center pt-3">
             {feature.description}
           </Card.Description>
         </Card.Header>

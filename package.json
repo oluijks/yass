@@ -1,7 +1,7 @@
 {
   "name": "yass",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Yet another sveltekit starter",
   "scripts": {
     "dev": "vite dev",
@@ -36,30 +36,31 @@
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/typography": "^0.5.16",
     "better-sqlite3": "11.8.1",
-    "drizzle-orm": "^0.39.0"
+    "drizzle-orm": "^0.39.3"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.1.0",
+    "@antfu/eslint-config": "^4.3.0",
     "@sveltejs/adapter-auto": "^4.0.0",
     "@sveltejs/adapter-node": "^5.2.12",
     "@sveltejs/enhanced-img": "^0.4.4",
-    "@sveltejs/kit": "^2.16.1",
+    "@sveltejs/kit": "^2.17.2",
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.0.8",
     "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/svelte": "^5.2.6",
+    "@testing-library/svelte": "^5.2.7",
     "@types/better-sqlite3": "^7.6.12",
     "@vitest/coverage-v8": "3.0.4",
-    "@vitest/ui": "^3.0.4",
+    "@vitest/ui": "^3.0.6",
     "autoprefixer": "^10.4.20",
     "bits-ui": "1.0.0-next.78",
     "clsx": "^2.1.1",
     "dotenv": "^16.4.7",
-    "drizzle-kit": "^0.30.3",
+    "drizzle-kit": "^0.30.4",
     "embla-carousel-svelte": "^8.5.2",
-    "eslint": "^9.19.0",
+    "eslint": "^9.21.0",
     "eslint-plugin-format": "^1.0.1",
     "eslint-plugin-svelte": "^2.46.1",
     "formsnap": "2.0.0",
@@ -68,20 +69,29 @@
     "mode-watcher": "^0.5.1",
     "phosphor-svelte": "^3.0.1",
     "rollup-plugin-visualizer": "^5.14.0",
-    "svelte": "^5.19.3",
+    "svelte": "^5.20.2",
     "svelte-check": "^4.1.4",
     "svelte-eslint-parser": "^0.43.0",
     "svelte-sonner": "^0.3.28",
     "sveltekit-superforms": "^2.23.1",
-    "tailwind-merge": "^2.6.0",
+    "tailwind-merge": "^3.0.1",
     "tailwind-variants": "^0.3.1",
-    "tailwindcss": "^3.4.17",
+    "tailwindcss": "^4.0.8",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.7.3",
     "typescript-svelte-plugin": "^0.3.45",
-    "vite": "^6.0.11",
+    "vite": "^6.1.1",
     "vite-plugin-compression": "^0.5.1",
-    "vitest": "^3.0.4",
-    "zod": "^3.24.1"
+    "vitest": "^3.0.6",
+    "zod": "^3.24.2"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ],
+    "onlyBuiltDependencies": [
+      "better-sqlite3"
+    ]
   }
 }

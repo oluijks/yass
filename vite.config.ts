@@ -6,6 +6,7 @@
 
 import { enhancedImages } from "@sveltejs/enhanced-img";
 import { sveltekit } from "@sveltejs/kit/vite";
+import tailwindcss from "@tailwindcss/vite";
 import { svelteTesting } from "@testing-library/svelte/vite";
 // import { visualizer } from "rollup-plugin-visualizer";
 import viteCompression from "vite-plugin-compression";
@@ -18,6 +19,7 @@ import pkg from "./package.json" with { type: "json" };
 export default defineConfig({
   plugins: [
     sveltekit(),
+    tailwindcss(),
     enhancedImages(),
     svelteTesting(),
     viteCompression({
