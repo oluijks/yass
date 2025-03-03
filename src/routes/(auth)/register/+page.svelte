@@ -4,7 +4,7 @@
   // import { getAppState } from "$lib/state/app.svelte.js";
 
   const { data } = $props();
-  // const appState = getAppState();
+// const appState = getAppState();
   // const animated = $derived(appState.animationsEnabled);
 </script>
 
