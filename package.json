@@ -1,7 +1,7 @@
 {
   "name": "yass",
   "type": "module",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "description": "Yet another sveltekit starter",
   "scripts": {
     "dev": "vite dev",
